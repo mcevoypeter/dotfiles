@@ -26,3 +26,7 @@
 	path = pack/plugins/start/vim-terraform
 	url = https://github.com/hashivim/vim-terraform.git
 	branch = master
+[submodule "pack/plugins/start/vim-prisma"]
+	path = pack/plugins/start/vim-prisma
+	url = https://github.com/prisma/vim-prisma.git
+	branch = main
