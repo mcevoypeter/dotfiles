@@ -10,6 +10,9 @@ vim.cmd([[
   set tabstop=2
 ]])
 
+-- Enable intuitive backspace behavior in insert mode.
+vim.cmd("set backspace=indent,eol,start")
+
 -- Always show status line.
 vim.cmd("set laststatus=2")
 
