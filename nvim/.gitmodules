@@ -1,0 +1,4 @@
+[submodule "pack/plugins/start/lightline.vim"]
+	path = pack/plugins/start/lightline.vim
+	url = https://github.com/itchyny/lightline.vim.git
+	branch = master

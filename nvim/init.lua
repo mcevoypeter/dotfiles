@@ -77,3 +77,5 @@ vim.cmd([[
   nnoremap <C-N> :bnext<CR>
   nnoremap <C-P> :bprevious<CR>
 ]])
+
+require("lightline-vim")
