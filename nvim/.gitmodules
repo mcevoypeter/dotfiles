@@ -38,3 +38,7 @@
 	path = pack/plugins/start/vim-jsx-typescript
 	url = https://github.com/peitalin/vim-jsx-typescript.git
 	branch = master
+[submodule "pack/plugins/start/vim-javascript"]
+	path = pack/plugins/start/vim-javascript
+	url = https://github.com/pangloss/vim-javascript.git
+	branch = master
