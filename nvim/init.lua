@@ -7,6 +7,9 @@ vim.cmd("colorscheme default")
 -- line numbering
 vim.cmd("set relativenumber")
 
+-- Clear <C-T> so it can be used as the tmux prefix.
+vim.cmd("nnoremap <C-T> <Nop>")
+
 -- Use UTF-8 encoding.
 vim.cmd([[
   set encoding=utf-8
