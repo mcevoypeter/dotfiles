@@ -18,3 +18,7 @@
 	path = pack/plugins/start/vim-rsi
 	url = https://github.com/tpope/vim-rsi.git
 	branch = master
+[submodule "pack/plugins/start/python-syntax"]
+	path = pack/plugins/start/python-syntax
+	url = https://github.com/vim-python/python-syntax.git
+	branch = master

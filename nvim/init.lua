@@ -84,3 +84,4 @@ vim.cmd([[
 -- plugins
 require("fzf-vim")
 require("lightline-vim")
+require("python-syntax")
