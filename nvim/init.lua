@@ -78,4 +78,6 @@ vim.cmd([[
   nnoremap <C-P> :bprevious<CR>
 ]])
 
+-- plugins
+require("fzf-vim")
 require("lightline-vim")

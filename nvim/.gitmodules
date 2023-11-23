@@ -2,3 +2,7 @@
 	path = pack/plugins/start/lightline.vim
 	url = https://github.com/itchyny/lightline.vim.git
 	branch = master
+[submodule "pack/plugins/start/fzf.vim"]
+	path = pack/plugins/start/fzf.vim
+	url = https://github.com/junegunn/fzf.vim.git
+	branch = master
