@@ -66,3 +66,9 @@ vim.cmd([[
   let mapleader=" "
   let maplocalleader =" "
 ]])
+
+-- buffer list navigation
+vim.cmd([[
+  nnoremap <C-N> :bnext<CR>
+  nnoremap <C-P> :bprevious<CR>
+]])
