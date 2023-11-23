@@ -30,3 +30,7 @@
 	path = pack/plugins/start/vim-prisma
 	url = https://github.com/prisma/vim-prisma.git
 	branch = main
+[submodule "pack/plugins/start/typescript-vim"]
+	path = pack/plugins/start/typescript-vim
+	url = https://github.com/leafgarland/typescript-vim.git
+	branch = master
