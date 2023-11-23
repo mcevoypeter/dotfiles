@@ -22,3 +22,7 @@
 	path = pack/plugins/start/python-syntax
 	url = https://github.com/vim-python/python-syntax.git
 	branch = master
+[submodule "pack/plugins/start/vim-terraform"]
+	path = pack/plugins/start/vim-terraform
+	url = https://github.com/hashivim/vim-terraform.git
+	branch = master
