@@ -1,3 +1,6 @@
+-- color scheme
+vim.cmd("colorscheme default")
+
 -- tab settings
 vim.cmd([[
   set autoindent
