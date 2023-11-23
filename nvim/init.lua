@@ -56,6 +56,8 @@ vim.cmd([[
   set ignorecase smartcase
   " Display search count message.
   set shortmess-=S
+  " Turn off search highlighting with <CR>.
+  nnoremap <silent> <CR> :nohlsearch<CR><CR>
 ]])
 
 -- Enable ZSH-like tab-complete in command mode.
