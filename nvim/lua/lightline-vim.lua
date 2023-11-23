@@ -3,7 +3,7 @@ vim.g.lightline = {
   active = {
     left = {
       { "mode", "paste" },
-      { "readonly", "filename", "modified" }
+      { "gitbranch", "readonly", "filename", "modified" }
     },
     right = {
       { "lineinfo", "charvaluehex" },
@@ -14,6 +14,9 @@ vim.g.lightline = {
   component = {
     charvaluehex = "0x%B",
     filename = "%f"
+  },
+  component_function = {
+    gitbranch = "FugitiveHead"
   },
   mode_map = {
     n = "N",
