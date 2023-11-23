@@ -44,3 +44,9 @@ vim.cmd([[
   " Display search count message.
   set shortmess-=S
 ]])
+
+-- Enable ZSH-like tab-complete in command mode.
+vim.cmd([[
+  set wildmenu
+  set wildmode=full
+]])
