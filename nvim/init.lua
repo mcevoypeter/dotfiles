@@ -1,6 +1,9 @@
 -- color scheme
 vim.cmd("colorscheme default")
 
+-- line numbering
+vim.cmd("set relativenumber")
+
 -- Use UTF-8 encoding.
 vim.cmd([[
   set encoding=utf-8
