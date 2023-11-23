@@ -1,3 +1,12 @@
+-- tab settings
+vim.cmd([[
+  set autoindent
+  set expandtab
+  set shiftwidth=2
+  set smartindent
+  set tabstop=2
+]])
+
 -- split window settings
 vim.cmd([[
   set splitbelow
