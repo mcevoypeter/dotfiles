@@ -1,3 +1,6 @@
+-- Disable vi compatibility, which should always be done first.
+vim.cmd("set nocompatible")
+
 -- color scheme
 vim.cmd("colorscheme default")
 
