@@ -32,6 +32,10 @@ vim.cmd("set laststatus=2")
 vim.cmd([[
   set splitbelow
   set splitright
+  nnoremap <C-K> <C-W><C-K>
+  nnoremap <C-L> <C-W><C-L>
+  nnoremap <C-J> <C-W><C-J>
+  nnoremap <C-H> <C-W><C-H>
 ]])
 
 -- search settings
