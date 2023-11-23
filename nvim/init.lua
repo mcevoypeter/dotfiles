@@ -7,6 +7,9 @@ vim.cmd([[
   set tabstop=2
 ]])
 
+-- Always show status line.
+vim.cmd("set laststatus=2")
+
 -- split window settings
 vim.cmd([[
   set splitbelow
