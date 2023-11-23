@@ -1,6 +1,12 @@
 -- color scheme
 vim.cmd("colorscheme default")
 
+-- Use UTF-8 encoding.
+vim.cmd([[
+  set encoding=utf-8
+  set fileencoding=utf-8
+]])
+
 -- tab settings
 vim.cmd([[
   set autoindent
