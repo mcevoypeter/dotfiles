@@ -7,6 +7,12 @@ vim.cmd([[
   set fileencoding=utf-8
 ]])
 
+-- Turn off all bells.
+vim.cmd([[
+  set noerrorbells
+  set novisualbell
+]])
+
 -- tab settings
 vim.cmd([[
   set autoindent
