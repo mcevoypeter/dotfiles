@@ -50,3 +50,9 @@ vim.cmd([[
   set wildmenu
   set wildmode=full
 ]])
+
+-- global and local leaders
+vim.cmd([[
+  let mapleader=" "
+  let maplocalleader =" "
+]])
