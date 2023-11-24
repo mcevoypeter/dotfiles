@@ -82,6 +82,7 @@ vim.cmd([[
 ]])
 
 -- plugins
+require("coc-nvim")
 require("fzf-vim")
 require("lightline-vim")
 require("python-syntax")
