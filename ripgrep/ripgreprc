@@ -1,2 +1,5 @@
 --type-add
 dt:*.{dt}
+
+--type-add
+edk:*.{dec,dsc,fdf,inf}
