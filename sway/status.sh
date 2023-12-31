@@ -9,9 +9,11 @@ partition="/dev/nvme0n1p3"
 partition_size="$(df -h $partition | tail -1 | awk '{print $2}')"
 partition_used="$(df -h $partition | tail -1 | awk '{print $3}')"
 
+screen_brightness="$(( 100 * $(brightnessctl get) / $(brightnessctl max) ))"
+
 battery_level="$(cat /sys/class/power_supply/BAT0/capacity)"
 battery_status="$(cat /sys/class/power_supply/BAT0/status)"
 
 datetime="$(date +'%Y-%m-%d %I:%M:%S %p')"
 
-echo "${ip_addr} | ${mem_used}/${mem_size} (mem) | ${partition_used}/${partition_size} (disk) | ${battery_level}% (${battery_status}) | ${datetime}"
+echo "${ip_addr} | ${mem_used}/${mem_size} (mem) | ${partition_used}/${partition_size} (disk) | ${screen_brightness}% (screen) | ${battery_level}% (${battery_status}) | ${datetime}"
