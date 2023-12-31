@@ -23,6 +23,9 @@ set $term foot
 # on the original workspace that the command was run on.
 set $menu dmenu_path | dmenu | xargs swaymsg exec --
 
+# Preferred screen brightness control utility
+set $backlight brightnessctl set
+
 # Preferred exit strategy
 #  Ask before exiting:
 # set $exit swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
@@ -95,6 +98,10 @@ output * bg #000000 solid_color
 
     # Exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+e exec $exit
+
+    # Adjust screen brightness.
+    bindsym XF86MonBrightnessUp exec $backlight +5%
+    bindsym XF86MonBrightnessDown exec $backlight 5%-
 #
 # Moving around:
 #
