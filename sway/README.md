@@ -3,8 +3,7 @@
 ## Installation
 
 ```console
-git clone git@github.com:mcevoypeter/sway.git path/to/repo
-ln -s absolute/path/to/repo ~/.config/sway
+git clone git@github.com:mcevoypeter/sway.git ~/.config/sway
 ```
 
 [Sway]: https://swaywm.org/
