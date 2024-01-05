@@ -218,6 +218,13 @@ mode "resize" {
     bindsym Escape mode "default"
 }
 bindsym $mod+r mode "resize"
+#
+# REPL:
+#
+  # Open a Python REPL
+  bindsym $mod+Shift+p exec $term --app-id=repl python
+
+  for_window [app_id="repl"] floating enable
 
 #
 # Status Bar:
