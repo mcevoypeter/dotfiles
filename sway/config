@@ -19,7 +19,13 @@ set $term foot
 # Preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu dmenu_path | dmenu | xargs swaymsg exec --
+set $menu exec $term --app-id=launcher bash -c \
+  "compgen -c \
+  | rg --invert-match fzf \
+  | sort --unique \
+  | fzf --layout=reverse \
+  | xargs --no-run-if-empty swaymsg exec --"
+for_window [app_id="launcher"] floating enable
 
 # Preferred screen brightness control utility
 set $backlight brightnessctl set
