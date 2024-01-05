@@ -224,6 +224,9 @@ bindsym $mod+r mode "resize"
   # Open a GDB REPL
   bindsym $mod+Shift+g exec $term --app-id=repl gdb
 
+  # Open a Node REPL
+  bindsym $mod+Shift+n exec $term --app-id=repl node
+
   # Open a Python REPL
   bindsym $mod+Shift+p exec $term --app-id=repl python
 
