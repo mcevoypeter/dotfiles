@@ -1,3 +1,9 @@
+if vim.fn.has("macunix") then
+  vim.cmd([[
+    set runtimepath+=/opt/homebrew/opt/fzf
+  ]])
+end
+
 vim.cmd([[
   nnoremap <Leader>b :Buffers<CR>
   nnoremap <Leader>f :Files<CR>
