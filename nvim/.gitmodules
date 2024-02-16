@@ -50,3 +50,6 @@
 	path = pack/plugins/start/vim-go
 	url = https://github.com/fatih/vim-go.git
 	branch = master # checked out to v1.28
+[submodule "pack/plugins/start/nvim-treesitter"]
+	path = pack/plugins/start/nvim-treesitter
+	url = https://github.com/nvim-treesitter/nvim-treesitter.git
