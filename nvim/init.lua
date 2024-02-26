@@ -84,6 +84,12 @@ vim.cmd([[
   nnoremap <C-P> :bprevious<CR>
 ]])
 
+-- grep
+vim.cmd([[
+  set grepprg=rg\ --vimgrep
+  set grepformat^=%f:%l:%c:%m
+]])
+
 -- plugins
 require("coc-nvim")
 require("fzf-vim")
