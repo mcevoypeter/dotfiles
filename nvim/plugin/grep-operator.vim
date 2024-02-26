@@ -14,8 +14,8 @@ function! s:GrepOperator(type)
         return
     endif
 
-    silent execute "grep! " . shellescape(@@) . " ."
-    copen
+    silent execute "lgrep! " . shellescape(@@) . " ."
+    lopen
 
     let @@ = saved_unnamed_register
 endfunction
