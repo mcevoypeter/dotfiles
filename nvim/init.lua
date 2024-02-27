@@ -90,11 +90,6 @@ vim.cmd([[
   set grepformat^=%f:%l:%c:%m
 ]])
 
--- ctags
-vim.cmd([[
-  nnoremap <C-[> :pop
-]])
-
 -- plugins
 require("coc-nvim")
 require("fzf-vim")
