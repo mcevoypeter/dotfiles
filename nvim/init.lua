@@ -94,4 +94,5 @@ vim.cmd([[
 require("coc-nvim")
 require("fzf-vim")
 require("lightline-vim")
+require("nnn-nvim")
 require("python-syntax")
