@@ -48,9 +48,16 @@ vim.cmd([[
   set splitbelow
   set splitright
   nnoremap <C-K> <C-W><C-K>
+  tnoremap <C-K> <C-\><C-N><C-K>
+
   nnoremap <C-L> <C-W><C-L>
+  tnoremap <C-L> <C-\><C-N><C-L>
+
   nnoremap <C-J> <C-W><C-J>
+  tnoremap <C-J> <C-\><C-N><C-J>
+
   nnoremap <C-H> <C-W><C-H>
+  tnoremap <C-H> <C-\><C-N><C-H>
 ]])
 
 -- search settings
