@@ -52,3 +52,6 @@
 [submodule "pack/plugins/start/nnn.nvim"]
 	path = pack/plugins/start/nnn.nvim
 	url = https://github.com/luukvbaal/nnn.nvim.git
+[submodule "pack/plugins/start/indent-blankline.nvim"]
+	path = pack/plugins/start/indent-blankline.nvim
+	url = https://github.com/lukas-reineke/indent-blankline.nvim.git
