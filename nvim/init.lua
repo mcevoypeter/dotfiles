@@ -97,6 +97,11 @@ vim.cmd([[
   set grepformat^=%f:%l:%c:%m
 ]])
 
+-- quickfix list
+vim.cmd([[
+  nnoremap <Leader>l :copen<CR>
+]])
+
 -- plugins
 require("coc-nvim")
 require("fzf-vim")
