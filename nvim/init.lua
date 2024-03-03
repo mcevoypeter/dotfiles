@@ -95,6 +95,7 @@ vim.cmd([[
 vim.cmd([[
   set grepprg=rg\ --vimgrep
   set grepformat^=%f:%l:%c:%m
+  nnoremap <Leader>s :grep! 
 ]])
 
 -- quickfix list
