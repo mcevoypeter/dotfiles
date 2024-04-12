@@ -6,7 +6,8 @@ end
 
 vim.cmd([[
   nnoremap <Leader>b :Buffers<CR>
-  nnoremap <Leader>f :GFiles<CR>
+  nnoremap <Leader>f :Files<CR>
+  nnoremap <Leader>g :GFiles<CR>
   nnoremap <Leader>d :GFiles?<CR>
 ]])
 
