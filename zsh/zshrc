@@ -67,6 +67,7 @@ function zle_ps() {
 # ALIASES
 #
 
+alias av="action-validator"
 alias gad="git add"
 alias gap="git apply"
 alias gbi="git bisect"
