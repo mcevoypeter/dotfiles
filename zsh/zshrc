@@ -34,6 +34,14 @@ function zle_git_branch() {
   [[ -n "$branch" ]] && zle -U "$branch"
 }
 
+# Select a Git commit.
+function zle_git_commit() {
+  local sha=$(git --no-pager log --abbrev-commit --pretty=oneline              \
+    | fzf_cmd --no-sort                                                        \
+    | awk '{ print $1 }')
+  [[ -n "$sha" ]] && zle -U "$sha"
+}
+
 # Select one or more commands from the shell's history.
 function zle_history() {
   local cmd=$(history 1                                                        \
@@ -150,6 +158,10 @@ bindkey -M viins '' backward-delete-char
 zle -N zle_git_branch
 bindkey -M viins '^B' zle_git_branch
 
+# Access Git commits.
+zle -N zle_git_commit
+bindkey -M viins '^G' zle_git_commit
+
 # Access command history.
 zle -N zle_history
 bindkey -M viins '^R' zle_history
@@ -160,7 +172,7 @@ bindkey -M viins '^F' zle_ls
 
 # Access process table.
 zle -N zle_ps
-bindkey -M viins '^G' zle_ps
+bindkey -M viins '^P' zle_ps
 
 # Enable Zsh hooks.
 autoload -U add-zsh-hook
