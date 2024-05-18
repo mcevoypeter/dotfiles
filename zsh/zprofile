@@ -17,8 +17,15 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
 export PYENV_ROOT="$HOME/.pyenv"
-# see https://forums.ankiweb.net/t/anki-doesnt-start-under-wayland-linux/10409
-export QT_QPA_PLATFORM=xcb
 export RIPGREP_CONFIG_PATH="$HOME/.config/ripgrep/ripgreprc"
 export TERM="tmux-256color"
-export XDG_CURRENT_DESKTOP="sway"
+
+case $(uname -s) in
+  "Darwin")
+    ;;
+  "Linux")
+    # see https://forums.ankiweb.net/t/anki-doesnt-start-under-wayland-linux/10409
+    export QT_QPA_PLATFORM=xcb
+    export XDG_CURRENT_DESKTOP="sway"
+    ;;
+esac
