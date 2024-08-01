@@ -3,6 +3,9 @@
 local lspconfig = require("lspconfig")
 vim.keymap.set('n', 'K', vim.lsp.buf.hover)
 
+-- npm i -g bash-language-server
+lspconfig.bashls.setup{}
+
 -- npm install -g pyright
 lspconfig.pyright.setup{}
 
