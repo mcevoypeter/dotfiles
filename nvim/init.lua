@@ -110,3 +110,4 @@ vim.cmd([[
 require("fzf-vim")
 require("indent-blankline-nvim")
 require("lightline-vim")
+require("nvim-lspconfig")
