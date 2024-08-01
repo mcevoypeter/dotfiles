@@ -22,10 +22,6 @@
 	path = nvim/pack/plugins/start/python-syntax
 	url = https://github.com/vim-python/python-syntax.git
 	branch = master
-[submodule "nvim/pack/plugins/start/vim-jsx-typescript"]
-	path = nvim/pack/plugins/start/vim-jsx-typescript
-	url = https://github.com/peitalin/vim-jsx-typescript.git
-	branch = master
 [submodule "nvim/pack/plugins/start/coc.nvim"]
 	path = nvim/pack/plugins/start/coc.nvim
 	url = https://github.com/neoclide/coc.nvim.git
