@@ -3,6 +3,9 @@
 local lspconfig = require("lspconfig")
 vim.keymap.set('n', 'K', vim.lsp.buf.hover)
 
+-- npm install -g @tailwindcss/language-server
+lspconfig.tailwindcss.setup{}
+
 -- brew install hashicorp/tap/terraform-ls
 lspconfig.terraformls.setup{}
 
