@@ -3,6 +3,9 @@
 local lspconfig = require("lspconfig")
 vim.keymap.set('n', 'K', vim.lsp.buf.hover)
 
+-- npm install -g pyright
+lspconfig.pyright.setup{}
+
 -- npm install -g @tailwindcss/language-server
 lspconfig.tailwindcss.setup{}
 
