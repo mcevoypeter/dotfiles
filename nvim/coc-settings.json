@@ -1,8 +1,0 @@
-{
-  "suggest.maxCompleteItemCount": 20,
-  "coc.preferences.formatOnSave": true,
-  "coc.preferences.formatOnType": true,
-  "diagnostic.errorSign": "•",
-  "diagnostic.warningSign": "•",
-  "diagnostic.infoSign": "•"
-}
