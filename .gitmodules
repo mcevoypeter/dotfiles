@@ -49,9 +49,6 @@
 [submodule "nvim/pack/plugins/start/nvim-treesitter"]
 	path = nvim/pack/plugins/start/nvim-treesitter
 	url = https://github.com/nvim-treesitter/nvim-treesitter.git
-[submodule "nvim/pack/plugins/start/nnn.nvim"]
-	path = nvim/pack/plugins/start/nnn.nvim
-	url = https://github.com/luukvbaal/nnn.nvim.git
 [submodule "nvim/pack/plugins/start/indent-blankline.nvim"]
 	path = nvim/pack/plugins/start/indent-blankline.nvim
 	url = https://github.com/lukas-reineke/indent-blankline.nvim.git
