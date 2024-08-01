@@ -22,10 +22,6 @@
 	path = nvim/pack/plugins/start/python-syntax
 	url = https://github.com/vim-python/python-syntax.git
 	branch = master
-[submodule "nvim/pack/plugins/start/vim-terraform"]
-	path = nvim/pack/plugins/start/vim-terraform
-	url = https://github.com/hashivim/vim-terraform.git
-	branch = master
 [submodule "nvim/pack/plugins/start/vim-jsx-typescript"]
 	path = nvim/pack/plugins/start/vim-jsx-typescript
 	url = https://github.com/peitalin/vim-jsx-typescript.git
