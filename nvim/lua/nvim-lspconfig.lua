@@ -9,6 +9,9 @@ lspconfig.bashls.setup{}
 -- npm install -g dockerfile-language-server-nodejs
 lspconfig.dockerls.setup{}
 
+-- npm i -g vscode-langservers-extracted
+lspconfig.jsonls.setup{}
+
 -- npm install -g pyright
 lspconfig.pyright.setup{}
 
