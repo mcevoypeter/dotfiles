@@ -18,10 +18,6 @@
 	path = nvim/pack/plugins/start/vim-rsi
 	url = https://github.com/tpope/vim-rsi.git
 	branch = master
-[submodule "nvim/pack/plugins/start/python-syntax"]
-	path = nvim/pack/plugins/start/python-syntax
-	url = https://github.com/vim-python/python-syntax.git
-	branch = master
 [submodule "nvim/pack/plugins/start/coc.nvim"]
 	path = nvim/pack/plugins/start/coc.nvim
 	url = https://github.com/neoclide/coc.nvim.git
