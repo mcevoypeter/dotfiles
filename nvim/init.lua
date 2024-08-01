@@ -2,7 +2,7 @@
 vim.cmd("set nocompatible")
 
 -- color scheme
-vim.cmd("colorscheme default")
+vim.cmd("colorscheme quiet")
 
 -- line numbering
 vim.cmd([[
