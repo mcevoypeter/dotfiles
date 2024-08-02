@@ -33,3 +33,6 @@
 [submodule "nvim/pack/plugins/start/copilot.vim"]
 	path = nvim/pack/plugins/start/copilot.vim
 	url = https://github.com/github/copilot.vim.git
+[submodule "nvim/pack/plugins/start/diffview.nvim"]
+	path = nvim/pack/plugins/start/diffview.nvim
+	url = https://github.com/sindrets/diffview.nvim.git
