@@ -107,6 +107,7 @@ vim.cmd([[
 ]])
 
 -- plugins
+require("diffview-nvim")
 require("fzf-vim")
 require("indent-blankline-nvim")
 require("lightline-vim")
