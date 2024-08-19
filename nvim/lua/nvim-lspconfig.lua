@@ -2,6 +2,8 @@
 
 local lspconfig = require("lspconfig")
 vim.keymap.set('n', 'K', vim.lsp.buf.hover)
+vim.keymap.set('i', '<C-N>', vim.lsp.omnifunc)
+vim.keymap.set('i', '<C-P>', vim.lsp.omnifunc)
 
 -- npm i -g bash-language-server
 lspconfig.bashls.setup{}
