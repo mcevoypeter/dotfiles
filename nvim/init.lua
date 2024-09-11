@@ -107,6 +107,7 @@ vim.cmd([[
 ]])
 
 -- plugins
+require("chatgpt-nvim")
 require("diffview-nvim")
 require("fzf-vim")
 require("indent-blankline-nvim")
