@@ -15,6 +15,9 @@ lspconfig.jsonls.setup{}
 -- npm install -g pyright
 lspconfig.pyright.setup{}
 
+-- rustup component add rust-analyzer
+lspconfig.rust_analyzer.setup{}
+
 -- npm install -g @tailwindcss/language-server
 lspconfig.tailwindcss.setup{}
 
