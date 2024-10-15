@@ -20,6 +20,9 @@ lspconfig.pyright.setup{}
 -- rustup component add rust-analyzer
 lspconfig.rust_analyzer.setup{}
 
+-- Swift and C/C++/Objective-C
+lspconfig.sourcekit.setup{}
+
 -- npm install -g @tailwindcss/language-server
 lspconfig.tailwindcss.setup{}
 
