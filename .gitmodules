@@ -36,18 +36,3 @@
 [submodule "nvim/pack/plugins/start/diffview.nvim"]
 	path = nvim/pack/plugins/start/diffview.nvim
 	url = https://github.com/sindrets/diffview.nvim.git
-[submodule "nvim/pack/plugins/start/nui.vim"]
-	path = nvim/pack/plugins/start/nui.vim
-	url = https://github.com/MunifTanjim/nui.nvim
-[submodule "nvim/pack/plugins/start/chatgpt.nvim"]
-	path = nvim/pack/plugins/start/chatgpt.nvim
-	url = https://github.com/jackMort/ChatGPT.nvim.git
-[submodule "nvim/pack/plugins/start/trouble.nvim"]
-	path = nvim/pack/plugins/start/trouble.nvim
-	url = https://github.com/folke/trouble.nvim
-[submodule "nvim/pack/plugins/start/telescope.nvim"]
-	path = nvim/pack/plugins/start/telescope.nvim
-	url = https://github.com/nvim-telescope/telescope.nvim
-[submodule "nvim/pack/plugins/start/plenary.nvim"]
-	path = nvim/pack/plugins/start/plenary.nvim
-	url = https://github.com/nvim-lua/plenary.nvim
