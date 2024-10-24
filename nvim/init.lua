@@ -91,13 +91,6 @@ vim.cmd([[
   nnoremap <C-P> :bprevious<CR>
 ]])
 
--- grep
-vim.cmd([[
-  set grepprg=rg\ --vimgrep
-  set grepformat^=%f:%l:%c:%m
-  nnoremap <Leader>s :grep! 
-]])
-
 -- Reload the current buffer.
 vim.cmd("nnoremap <Leader>r :edit! %<CR>")
 
