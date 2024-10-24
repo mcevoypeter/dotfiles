@@ -106,9 +106,4 @@ vim.cmd([[
   nnoremap <Leader>l :copen<CR>
 ]])
 
--- plugins
-require("diffview-nvim")
-require("fzf-vim")
-require("indent-blankline-nvim")
-require("lightline-vim")
-require("nvim-lspconfig")
+require("config.lazy")
