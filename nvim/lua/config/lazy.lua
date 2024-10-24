@@ -158,7 +158,7 @@ require("lazy").setup({
         lspconfig.terraformls.setup{}
 
         -- npm i -g typescript typescript-language-server
-        lspconfig.tsserver.setup{}
+        lspconfig.ts_ls.setup{}
       end
     },
     {
