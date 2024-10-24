@@ -79,7 +79,8 @@ require("lazy").setup({
 
         vim.cmd([[
           nnoremap <Leader>b :Buffers<CR>
-          nnoremap <Leader>f :Rg<CR>
+          nnoremap <Leader>f :Files<CR>
+          nnoremap <Leader>s :Rg<CR>
         ]])
 
         vim.g.fzf_layout = {
