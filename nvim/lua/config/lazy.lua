@@ -123,6 +123,14 @@ require("lazy").setup({
       opts = {},
     },
     {
+      "luukvbaal/nnn.nvim",
+      config = function()
+        require("nnn").setup{}
+
+        vim.keymap.set("n", "<Leader>e", ":NnnPicker<CR>")
+      end,
+    },
+    {
       "neovim/nvim-lspconfig",
       config = function()
         -- see https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
