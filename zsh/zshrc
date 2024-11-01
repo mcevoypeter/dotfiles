@@ -84,6 +84,26 @@ function zle_ls() {
   [[ -n "$entry" ]] && zle -U "$entry"
 }
 
+# Launch Neovim.
+function zle_nvim() {
+  local branch=$(git branch --show-current 2> /dev/null)
+  local session
+  if [[ -n "$branch" ]]
+  then
+    session=$(echo $branch | sed 's|/|_|g')
+  else
+    session=$(basename $(pwd))
+  fi
+  session=".$session.session.vim"
+
+  local cmd="nvim -c \":autocmd VimLeave * :mksession! $session\""
+  if [[ -f "$session" ]]
+  then
+    cmd="$cmd -S $session"
+  fi
+  zle -U "$cmd"
+}
+
 # Select one or more PIDs from procs.
 function zle_ps() {
   local pid=$(procs                                                            \
@@ -197,6 +217,10 @@ bindkey -M viins '^J' zle_jobs
 # Access files and directories.
 zle -N zle_ls
 bindkey -M viins '^F' zle_ls
+
+# Launch Neovim.
+zle -N zle_nvim
+bindkey -M viins '^N' zle_nvim
 
 # Access process table.
 zle -N zle_ps
