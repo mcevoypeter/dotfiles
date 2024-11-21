@@ -18,8 +18,10 @@ keybinds clear-defaults=true {
     }
     normal {
         //
-        // Scrollback
+        // Search / Scrollback
         //
+
+        bind "[" { SwitchToMode "Search"; }
 
         bind "Ctrl y" {
             EditScrollback
@@ -259,7 +261,6 @@ keybinds clear-defaults=true {
             SwitchToMode "Locked"
         }
     }
-
     renametab {
         bind "Enter" { SwitchToMode "Locked"; }
         bind "Esc" {
@@ -273,6 +274,22 @@ keybinds clear-defaults=true {
           UndoRenamePane
           SwitchToMode "Locked"
         }
+    }
+    search {
+        bind "Ctrl c" { ScrollToBottom; SwitchToMode "Locked"; }
+        bind "j" "Down" { ScrollDown; }
+        bind "k" "Up" { ScrollUp; }
+        bind "Ctrl f" "PageDown" "Right" "l" { PageScrollDown; }
+        bind "Ctrl b" "PageUp" "Left" "h" { PageScrollUp; }
+        bind "d" { HalfPageScrollDown; }
+        bind "u" { HalfPageScrollUp; }
+        bind "n" { Search "down"; }
+        bind "p" { Search "up"; }
+        //bind "/" { Search "down"; }
+        //bind "?" { Search "up"; }
+        bind "c" { SearchToggleOption "CaseSensitivity"; }
+        bind "w" { SearchToggleOption "Wrap"; }
+        bind "o" { SearchToggleOption "WholeWord"; }
     }
 }
 
