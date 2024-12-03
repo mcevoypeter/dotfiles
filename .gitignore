@@ -1,3 +1,4 @@
+*.local
 *.session.vim
 .aider*
 .env
