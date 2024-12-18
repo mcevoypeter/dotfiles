@@ -7,14 +7,16 @@ function fzf_cmd() {
 }
 
 # Launch an Aider session.
-function aid() {
+function aider_() {
   fzf_preview="[ -d {} ]                                                       \
     && eza --all --long {}                                                     \
     || bat --color=always --line-range=0:200 {} --style=numbers"
-  aider $(fd . . --hidden --no-ignore-vcs                                      \
-    | fzf_cmd --preview="$fzf_preview" --scheme=path                           \
-    | awk 1 ORS=' '                                                            \
-  ) && nvim -c ':DiffviewOpen' && git add -p .
+
+  ctx_file=$(fd . $HOME/code/gh/mcevoypeter/dotfiles/aider/ctx \
+    | fzf --preview="$fzf_preview" --scheme=path               \
+    | awk 1 ORS=' ')
+
+  [[ -n "ctx_file" ]] && aider --load "$ctx_file" || aider
 }
 
 function git_grep() {
@@ -116,6 +118,7 @@ function zle_ps() {
 # ALIASES
 #
 
+alias ai="aider_"
 alias av="action-validator"
 alias gad="git add"
 alias gap="git apply"
