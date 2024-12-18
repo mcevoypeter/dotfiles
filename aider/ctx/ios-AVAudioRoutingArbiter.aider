@@ -1,0 +1,12 @@
+# Created     : 2024 Dec 18
+# Last updated: 2024 Dec 18
+
+#
+# AVFAudio: AVAudioRoutingArbiter
+#
+
+/web https://developer.apple.com/documentation/avfaudio/avaudioroutingarbiter
+/web https://developer.apple.com/documentation/avfaudio/avaudioroutingarbiter/begin(category:completionhandler:)
+/web https://developer.apple.com/documentation/avfaudio/avaudioroutingarbiter/category
+/web https://developer.apple.com/documentation/avfaudio/avaudioroutingarbiter/leave()
+/web https://developer.apple.com/documentation/avfaudio/avaudioroutingarbiter/shared

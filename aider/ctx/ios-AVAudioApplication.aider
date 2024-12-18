@@ -1,0 +1,19 @@
+# Created     : 2024 Dec 18
+# Last updated: 2024 Dec 18
+
+#
+# AVFAudio: AVAudioApplication
+#
+
+/web https://developer.apple.com/documentation/avfaudio/avaudioapplication
+/web https://developer.apple.com/documentation/avfaudio/avaudioapplication/inputmutestatechangenotification
+/web https://developer.apple.com/documentation/avfaudio/avaudioapplication/isinputmuted
+/web https://developer.apple.com/documentation/avfaudio/avaudioapplication/microphoneinjectionpermission-swift.enum
+/web https://developer.apple.com/documentation/avfaudio/avaudioapplication/microphoneinjectionpermission-swift.property
+/web https://developer.apple.com/documentation/avfaudio/avaudioapplication/recordpermission-swift.enum
+/web https://developer.apple.com/documentation/avfaudio/avaudioapplication/recordpermission-swift.property
+/web https://developer.apple.com/documentation/avfaudio/avaudioapplication/requestmicrophoneinjectionpermission(completionhandler:)
+/web https://developer.apple.com/documentation/avfaudio/avaudioapplication/requestrecordpermission(completionhandler:)
+/web https://developer.apple.com/documentation/avfaudio/avaudioapplication/setinputmuted(_:)
+/web https://developer.apple.com/documentation/avfaudio/avaudioapplication/setinputmutestatechangehandler(_:)
+/web https://developer.apple.com/documentation/avfaudio/avaudioapplication/shared

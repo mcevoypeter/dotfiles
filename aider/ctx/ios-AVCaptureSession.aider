@@ -1,0 +1,57 @@
+# Created     : 2024 Dec 18
+# Last updated: 2024 Dec 18
+
+#
+# AVFoundation: AVCaptureSession
+#
+
+/web https://developer.apple.com/documentation/avfoundation/avcapturesession
+/web https://developer.apple.com/documentation/avfoundation/avcapturesession/beginconfiguration()
+/web https://developer.apple.com/documentation/avfoundation/avcapturesession/commitconfiguration()
+/web https://developer.apple.com/documentation/avfoundation/avcapturesession/preset
+/web https://developer.apple.com/documentation/avfoundation/avcapturesession/cansetsessionpreset(_:)
+/web https://developer.apple.com/documentation/avfoundation/avcapturesession/sessionpreset
+/web https://developer.apple.com/documentation/avfoundation/avcapturesession/inputs
+/web https://developer.apple.com/documentation/avfoundation/avcapturesession/canaddinput(_:)
+/web https://developer.apple.com/documentation/avfoundation/avcapturesession/addinput(_:)
+/web https://developer.apple.com/documentation/avfoundation/avcapturesession/removeinput(_:)
+/web https://developer.apple.com/documentation/avfoundation/avcapturesession/outputs
+/web https://developer.apple.com/documentation/avfoundation/avcapturesession/canaddoutput(_:)
+/web https://developer.apple.com/documentation/avfoundation/avcapturesession/addoutput(_:)
+/web https://developer.apple.com/documentation/avfoundation/avcapturesession/removeoutput(_:)
+/web https://developer.apple.com/documentation/avfoundation/avcapturesession/connections
+/web https://developer.apple.com/documentation/avfoundation/avcapturesession/addconnection(_:)
+/web https://developer.apple.com/documentation/avfoundation/avcapturesession/canaddconnection(_:)
+/web https://developer.apple.com/documentation/avfoundation/avcapturesession/addinputwithnoconnections(_:)
+/web https://developer.apple.com/documentation/avfoundation/avcapturesession/addoutputwithnoconnections(_:)
+/web https://developer.apple.com/documentation/avfoundation/avcapturesession/removeconnection(_:)
+/web https://developer.apple.com/documentation/avfoundation/avcaptureaudiochannel
+/web https://developer.apple.com/documentation/avfoundation/avcapturesession/supportscontrols
+/web https://developer.apple.com/documentation/avfoundation/avcapturesession/maxcontrolscount
+/web https://developer.apple.com/documentation/avfoundation/avcapturesession/controls
+/web https://developer.apple.com/documentation/avfoundation/avcapturesession/canaddcontrol(_:)
+/web https://developer.apple.com/documentation/avfoundation/avcapturesession/addcontrol(_:)
+/web https://developer.apple.com/documentation/avfoundation/avcapturesession/removecontrol(_:)
+/web https://developer.apple.com/documentation/avfoundation/avcapturesession/setcontrolsdelegate(_:queue:)
+/web https://developer.apple.com/documentation/avfoundation/avcapturesessioncontrolsdelegate
+/web https://developer.apple.com/documentation/avfoundation/avcapturesession/controlsdelegate
+/web https://developer.apple.com/documentation/avfoundation/avcapturesession/controlsdelegatecallbackqueue
+/web https://developer.apple.com/documentation/avfoundation/avcapturesession/startrunning()
+/web https://developer.apple.com/documentation/avfoundation/avcapturesession/stoprunning()
+/web https://developer.apple.com/documentation/avfoundation/avcapturesession/isrunning
+/web https://developer.apple.com/documentation/avfoundation/avcapturesession/isinterrupted
+/web https://developer.apple.com/documentation/avfoundation/avcapturesession/didstartrunningnotification
+/web https://developer.apple.com/documentation/avfoundation/avcapturesession/didstoprunningnotification
+/web https://developer.apple.com/documentation/avfoundation/avcapturesession/wasinterruptednotification
+/web https://developer.apple.com/documentation/avfoundation/avcapturesession/interruptionendednotification
+/web https://developer.apple.com/documentation/avfoundation/avcapturesession/runtimeerrornotification
+/web https://developer.apple.com/documentation/avfoundation/avcapturesession/ismultitaskingcameraaccesssupported
+/web https://developer.apple.com/documentation/avfoundation/avcapturesession/ismultitaskingcameraaccessenabled
+/web https://developer.apple.com/documentation/avfoundation/avcapturesession/hardwarecost
+/web https://developer.apple.com/documentation/avfoundation/avcapturesession/usesapplicationaudiosession
+/web https://developer.apple.com/documentation/avfoundation/avcapturesession/automaticallyconfiguresapplicationaudiosession
+/web https://developer.apple.com/documentation/avfoundation/avcapturesession/automaticallyconfiguresapplicationaudiosession
+/web https://developer.apple.com/documentation/avfoundation/avcapturesession/configuresapplicationaudiosessiontomixwithothers
+/web https://developer.apple.com/documentation/avfoundation/avcapturesession/automaticallyconfigurescapturedeviceforwidecolor
+/web https://developer.apple.com/documentation/avfoundation/avcapturesession/synchronizationclock
+/web https://developer.apple.com/documentation/avfoundation/avcapturesession/masterclock

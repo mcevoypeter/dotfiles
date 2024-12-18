@@ -1,0 +1,55 @@
+# Created     : 2024 Dec 18
+# Last updated: 2024 Dec 18
+
+#
+# AVFAudio
+#
+
+/web https://developer.apple.com/documentation/avfaudio
+/web https://developer.apple.com/documentation/avfaudio/audio-engine
+/web https://developer.apple.com/documentation/avfaudio/audio-hardware
+/web https://developer.apple.com/documentation/avfaudio/audio-routing
+/web https://developer.apple.com/documentation/avfaudio/audio-settings
+/web https://developer.apple.com/documentation/avfaudio/audio-units
+/web https://developer.apple.com/documentation/avfaudio/avaudio3dangularorientation
+/web https://developer.apple.com/documentation/avfaudio/avaudio3dmixing
+/web https://developer.apple.com/documentation/avfaudio/avaudio3dmixingpointsourceinheadmode
+/web https://developer.apple.com/documentation/avfaudio/avaudio3dmixingrenderingalgorithm
+/web https://developer.apple.com/documentation/avfaudio/avaudio3dmixingsourcemode
+/web https://developer.apple.com/documentation/avfaudio/avaudio3dpoint
+/web https://developer.apple.com/documentation/avfaudio/avaudio3dvector
+/web https://developer.apple.com/documentation/avfaudio/avaudio3dvectororientation
+/web https://developer.apple.com/documentation/avfaudio/avaudioapplication
+/web https://developer.apple.com/documentation/avfaudio/avaudiobuffer
+/web https://developer.apple.com/documentation/avfaudio/avaudioconverter
+/web https://developer.apple.com/documentation/avfaudio/avaudioenvironmentdistanceattenuationparameters
+/web https://developer.apple.com/documentation/avfaudio/avaudioenvironmentnode
+/web https://developer.apple.com/documentation/avfaudio/avaudioenvironmentoutputtype
+/web https://developer.apple.com/documentation/avfaudio/avaudioenvironmentreverbparameters
+/web https://developer.apple.com/documentation/avfaudio/avaudiofile
+/web https://developer.apple.com/documentation/avfaudio/avaudioinputnode
+/web https://developer.apple.com/documentation/avfaudio/avaudioionode
+/web https://developer.apple.com/documentation/avfaudio/avaudiomixernode
+/web https://developer.apple.com/documentation/avfaudio/avaudiomixing
+/web https://developer.apple.com/documentation/avfaudio/avaudionode
+/web https://developer.apple.com/documentation/avfaudio/avaudiooutputnode
+/web https://developer.apple.com/documentation/avfaudio/avaudioplayernode
+/web https://developer.apple.com/documentation/avfaudio/avaudiosequencer
+/web https://developer.apple.com/documentation/avfaudio/avaudiosinknode
+/web https://developer.apple.com/documentation/avfaudio/avaudiosourcenode
+/web https://developer.apple.com/documentation/avfaudio/avaudiotime
+/web https://developer.apple.com/documentation/avfaudio/avaudiounitsampler
+/web https://developer.apple.com/documentation/avfaudio/avmidiplayer
+/web https://developer.apple.com/documentation/avfaudio/building-a-signal-generator
+/web https://developer.apple.com/documentation/avfaudio/capturing-stereo-audio-from-built-in-microphones
+/web https://developer.apple.com/documentation/avfaudio/creating-custom-audio-effects
+/web https://developer.apple.com/documentation/avfaudio/deprecated-symbols
+/web https://developer.apple.com/documentation/avfaudio/handling-audio-interruptions
+/web https://developer.apple.com/documentation/avfaudio/macros
+/web https://developer.apple.com/documentation/avfaudio/performing-offline-audio-processing
+/web https://developer.apple.com/documentation/avfaudio/playing-custom-audio-with-your-own-player
+/web https://developer.apple.com/documentation/avfaudio/responding-to-audio-route-changes
+/web https://developer.apple.com/documentation/avfaudio/speech-synthesis
+/web https://developer.apple.com/documentation/avfaudio/using-voice-processing
+/web https://developer.apple.com/documentation/avfoundation/avaudiosessionspatialexperience-swift.protocol
+

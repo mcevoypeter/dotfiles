@@ -2,3 +2,4 @@
 *.session.vim
 .aider*
 .env
+page.html

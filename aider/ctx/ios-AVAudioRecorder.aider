@@ -1,0 +1,31 @@
+# Created     : 2024 Dec 18
+# Last updated: 2024 Dec 18
+
+#
+# AVFAudio: AVAudioRecorder
+#
+
+/web https://developer.apple.com/documentation/avfaudio/avaudiorecorder
+/web https://developer.apple.com/documentation/avfaudio/avaudiorecorder/averagepower(forchannel:)
+/web https://developer.apple.com/documentation/avfaudio/avaudiorecorder/channelassignments
+/web https://developer.apple.com/documentation/avfaudio/avaudiorecorder/currenttime
+/web https://developer.apple.com/documentation/avfaudio/avaudiorecorder/delegate
+/web https://developer.apple.com/documentation/avfaudio/avaudiorecorder/deleterecording()
+/web https://developer.apple.com/documentation/avfaudio/avaudiorecorder/devicecurrenttime
+/web https://developer.apple.com/documentation/avfaudio/avaudiorecorder/format
+/web https://developer.apple.com/documentation/avfaudio/avaudiorecorder/init(url:format:)
+/web https://developer.apple.com/documentation/avfaudio/avaudiorecorder/init(url:settings:)
+/web https://developer.apple.com/documentation/avfaudio/avaudiorecorder/ismeteringenabled
+/web https://developer.apple.com/documentation/avfaudio/avaudiorecorder/isrecording
+/web https://developer.apple.com/documentation/avfaudio/avaudiorecorder/pause()
+/web https://developer.apple.com/documentation/avfaudio/avaudiorecorder/peakpower(forchannel:)
+/web https://developer.apple.com/documentation/avfaudio/avaudiorecorder/preparetorecord()
+/web https://developer.apple.com/documentation/avfaudio/avaudiorecorder/record()
+/web https://developer.apple.com/documentation/avfaudio/avaudiorecorder/record(attime:)
+/web https://developer.apple.com/documentation/avfaudio/avaudiorecorder/record(attime:forduration:)
+/web https://developer.apple.com/documentation/avfaudio/avaudiorecorder/record(forduration:)
+/web https://developer.apple.com/documentation/avfaudio/avaudiorecorder/settings
+/web https://developer.apple.com/documentation/avfaudio/avaudiorecorder/stop()
+/web https://developer.apple.com/documentation/avfaudio/avaudiorecorder/updatemeters()
+/web https://developer.apple.com/documentation/avfaudio/avaudiorecorder/url
+/web https://developer.apple.com/documentation/avfaudio/avaudiorecorderdelegate

@@ -1,0 +1,40 @@
+# Created     : 2024 Dec 18
+# Last updated: 2024 Dec 18
+
+#
+# AVFAudio: AVAudioPlayer
+#
+
+/web https://developer.apple.com/documentation/avfaudio/avaudioplayer
+/web https://developer.apple.com/documentation/avfaudio/avaudioplayer/averagepower(forchannel:)
+/web https://developer.apple.com/documentation/avfaudio/avaudioplayer/channelassignments
+/web https://developer.apple.com/documentation/avfaudio/avaudioplayer/currentdevice
+/web https://developer.apple.com/documentation/avfaudio/avaudioplayer/currenttime
+/web https://developer.apple.com/documentation/avfaudio/avaudioplayer/data
+/web https://developer.apple.com/documentation/avfaudio/avaudioplayer/delegate
+/web https://developer.apple.com/documentation/avfaudio/avaudioplayer/devicecurrenttime
+/web https://developer.apple.com/documentation/avfaudio/avaudioplayer/duration
+/web https://developer.apple.com/documentation/avfaudio/avaudioplayer/enablerate
+/web https://developer.apple.com/documentation/avfaudio/avaudioplayer/format
+/web https://developer.apple.com/documentation/avfaudio/avaudioplayer/init(contentsof:)
+/web https://developer.apple.com/documentation/avfaudio/avaudioplayer/init(contentsof:filetypehint:)
+/web https://developer.apple.com/documentation/avfaudio/avaudioplayer/init(data:)
+/web https://developer.apple.com/documentation/avfaudio/avaudioplayer/init(data:filetypehint:)
+/web https://developer.apple.com/documentation/avfaudio/avaudioplayer/ismeteringenabled
+/web https://developer.apple.com/documentation/avfaudio/avaudioplayer/isplaying
+/web https://developer.apple.com/documentation/avfaudio/avaudioplayer/numberofchannels
+/web https://developer.apple.com/documentation/avfaudio/avaudioplayer/numberofloops
+/web https://developer.apple.com/documentation/avfaudio/avaudioplayer/pan
+/web https://developer.apple.com/documentation/avfaudio/avaudioplayer/pause()
+/web https://developer.apple.com/documentation/avfaudio/avaudioplayer/peakpower(forchannel:)
+/web https://developer.apple.com/documentation/avfaudio/avaudioplayer/play()
+/web https://developer.apple.com/documentation/avfaudio/avaudioplayer/play(attime:)
+/web https://developer.apple.com/documentation/avfaudio/avaudioplayer/preparetoplay()
+/web https://developer.apple.com/documentation/avfaudio/avaudioplayer/rate
+/web https://developer.apple.com/documentation/avfaudio/avaudioplayer/settings
+/web https://developer.apple.com/documentation/avfaudio/avaudioplayer/setvolume(_:fadeduration:)
+/web https://developer.apple.com/documentation/avfaudio/avaudioplayer/stop()
+/web https://developer.apple.com/documentation/avfaudio/avaudioplayer/updatemeters()
+/web https://developer.apple.com/documentation/avfaudio/avaudioplayer/url
+/web https://developer.apple.com/documentation/avfaudio/avaudioplayer/volume
+/web https://developer.apple.com/documentation/avfaudio/avaudioplayerdelegate

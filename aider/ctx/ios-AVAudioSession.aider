@@ -1,0 +1,77 @@
+# Created     : 2024 Dec 18
+# Last updated: 2024 Dec 18
+
+#
+# AVFAudio: AVAudioSession
+#
+
+/web https://developer.apple.com/documentation/AVFoundation/AVAudioSessionSpatialExperience-swift.protocol
+/web https://developer.apple.com/documentation/CoreAudioTypes/AVAudioSession/ErrorCode
+/web https://developer.apple.com/documentation/avfaudio/avaudiosession
+/web https://developer.apple.com/documentation/avfaudio/avaudiosession/activate(options:completionhandler:)
+/web https://developer.apple.com/documentation/avfaudio/avaudiosession/allowhapticsandsystemsoundsduringrecording
+/web https://developer.apple.com/documentation/avfaudio/avaudiosession/anchoringstrategy
+/web https://developer.apple.com/documentation/avfaudio/avaudiosession/availablecategories
+/web https://developer.apple.com/documentation/avfaudio/avaudiosession/availablemodes
+/web https://developer.apple.com/documentation/avfaudio/avaudiosession/bypassedspatialexperience
+/web https://developer.apple.com/documentation/avfaudio/avaudiosession/category-swift.property
+/web https://developer.apple.com/documentation/avfaudio/avaudiosession/category-swift.struct
+/web https://developer.apple.com/documentation/avfaudio/avaudiosession/category-swift.struct/playback
+/web https://developer.apple.com/documentation/avfaudio/avaudiosession/categoryoptions-swift.property
+/web https://developer.apple.com/documentation/avfaudio/avaudiosession/categoryoptions-swift.struct
+/web https://developer.apple.com/documentation/avfaudio/avaudiosession/fixedspatialexperience
+/web https://developer.apple.com/documentation/avfaudio/avaudiosession/headtrackedspatialexperience
+/web https://developer.apple.com/documentation/avfaudio/avaudiosession/inputorientation
+/web https://developer.apple.com/documentation/avfaudio/avaudiosession/intendedspatialexperience-1qwbe
+/web https://developer.apple.com/documentation/avfaudio/avaudiosession/interruptionnotification
+/web https://developer.apple.com/documentation/avfaudio/avaudiosession/iotype
+/web https://developer.apple.com/documentation/avfaudio/avaudiosession/isechocancelledinputavailable
+/web https://developer.apple.com/documentation/avfaudio/avaudiosession/isechocancelledinputenabled
+/web https://developer.apple.com/documentation/avfaudio/avaudiosession/ismicrophoneinjectionavailable
+/web https://developer.apple.com/documentation/avfaudio/avaudiosession/isnowplayingcandidate
+/web https://developer.apple.com/documentation/avfaudio/avaudiosession/isotheraudioplaying
+/web https://developer.apple.com/documentation/avfaudio/avaudiosession/mediaserviceswerelostnotification
+/web https://developer.apple.com/documentation/avfaudio/avaudiosession/mediaserviceswereresetnotification
+/web https://developer.apple.com/documentation/avfaudio/avaudiosession/microphoneinjectioncapabilitieschangenotification
+/web https://developer.apple.com/documentation/avfaudio/avaudiosession/microphoneinjectionmode
+/web https://developer.apple.com/documentation/avfaudio/avaudiosession/mode-swift.property
+/web https://developer.apple.com/documentation/avfaudio/avaudiosession/mode-swift.struct
+/web https://developer.apple.com/documentation/avfaudio/avaudiosession/preferredinputorientation
+/web https://developer.apple.com/documentation/avfaudio/avaudiosession/preferredmicrophoneinjectionmode
+/web https://developer.apple.com/documentation/avfaudio/avaudiosession/prefersechocancelledinput
+/web https://developer.apple.com/documentation/avfaudio/avaudiosession/prefersinterruptiononroutedisconnect
+/web https://developer.apple.com/documentation/avfaudio/avaudiosession/prefersnointerruptionsfromsystemalerts
+/web https://developer.apple.com/documentation/avfaudio/avaudiosession/preparerouteselectionforplayback(completionhandler:)
+/web https://developer.apple.com/documentation/avfaudio/avaudiosession/promptstyle-swift.enum
+/web https://developer.apple.com/documentation/avfaudio/avaudiosession/promptstyle-swift.property
+/web https://developer.apple.com/documentation/avfaudio/avaudiosession/renderingcapabilitieschangenotification
+/web https://developer.apple.com/documentation/avfaudio/avaudiosession/renderingmode-swift.enum
+/web https://developer.apple.com/documentation/avfaudio/avaudiosession/renderingmode-swift.property
+/web https://developer.apple.com/documentation/avfaudio/avaudiosession/renderingmodechangenotification
+/web https://developer.apple.com/documentation/avfaudio/avaudiosession/routeselection
+/web https://developer.apple.com/documentation/avfaudio/avaudiosession/routesharingpolicy-swift.enum
+/web https://developer.apple.com/documentation/avfaudio/avaudiosession/routesharingpolicy-swift.property
+/web https://developer.apple.com/documentation/avfaudio/avaudiosession/secondaryaudioshouldbesilencedhint
+/web https://developer.apple.com/documentation/avfaudio/avaudiosession/setactive(_:options:)
+/web https://developer.apple.com/documentation/avfaudio/avaudiosession/setactive:error:
+/web https://developer.apple.com/documentation/avfaudio/avaudiosession/setaggregatediopreference(_:)
+/web https://developer.apple.com/documentation/avfaudio/avaudiosession/setallowhapticsandsystemsoundsduringrecording(_:)
+/web https://developer.apple.com/documentation/avfaudio/avaudiosession/setcategory(_:)
+/web https://developer.apple.com/documentation/avfaudio/avaudiosession/setcategory(_:mode:options:)
+/web https://developer.apple.com/documentation/avfaudio/avaudiosession/setcategory(_:mode:policy:options:)
+/web https://developer.apple.com/documentation/avfaudio/avaudiosession/setcategory(_:options:)
+/web https://developer.apple.com/documentation/avfaudio/avaudiosession/setintendedspatialexperience(_:)
+/web https://developer.apple.com/documentation/avfaudio/avaudiosession/setisnowplayingcandidate(_:)
+/web https://developer.apple.com/documentation/avfaudio/avaudiosession/setmode(_:)
+/web https://developer.apple.com/documentation/avfaudio/avaudiosession/setpreferredinputorientation(_:)
+/web https://developer.apple.com/documentation/avfaudio/avaudiosession/setpreferredmicrophoneinjectionmode(_:)
+/web https://developer.apple.com/documentation/avfaudio/avaudiosession/setprefersechocancelledinput(_:)
+/web https://developer.apple.com/documentation/avfaudio/avaudiosession/setprefersinterruptiononroutedisconnect(_:)
+/web https://developer.apple.com/documentation/avfaudio/avaudiosession/setprefersnointerruptionsfromsystemalerts(_:)
+/web https://developer.apple.com/documentation/avfaudio/avaudiosession/sharedinstance()
+/web https://developer.apple.com/documentation/avfaudio/avaudiosession/silencesecondaryaudiohintnotification
+/web https://developer.apple.com/documentation/avfaudio/avaudiosession/soundstagesize
+/web https://developer.apple.com/documentation/avfaudio/avaudiosession/spatialplaybackcapabilitieschangednotification
+/web https://developer.apple.com/documentation/avfaudio/avaudiosession/stereoorientation
+/web https://developer.apple.com/documentation/avfaudio/avaudiosession/supportedoutputchannellayouts
+/web https://developer.apple.com/documentation/avfaudio/avaudiosessionactivationoptions
