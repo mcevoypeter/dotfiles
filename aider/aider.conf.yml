@@ -1,5 +1,5 @@
 # https://aider.chat/docs/config/aider_conf.html
 
-auto-commits: false
+auto-commits: true
 gitignore: false
 vim: true
