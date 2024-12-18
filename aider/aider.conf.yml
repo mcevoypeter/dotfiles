@@ -3,3 +3,4 @@
 auto-commits: true
 gitignore: false
 vim: true
+watch-files: true
