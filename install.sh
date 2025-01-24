@@ -4,7 +4,7 @@ which cargo || curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 cargo install cargo-binstall
 
-cargo binstall bat du-dust eza fd-find git-delta just procs ripgrep tokei zoxide
+cargo binstall bat du-dust eza fclones fd-find git-delta just procs ripgrep tokei zoxide
 
 case $(uname -s) in
   "Darwin")
