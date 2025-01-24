@@ -15,6 +15,8 @@ case $(uname -s) in
     ;;
 esac
 
+which abduco || (cd abduco && ./configure && make && sudo make install)
+
 ln -sf $(pwd)/aider/aider.conf.yml        $HOME/.aider.conf.yml
 ln -sf $(pwd)/alacritty                   $HOME/.config
 ln -sf $(pwd)/bat                         $HOME/.config

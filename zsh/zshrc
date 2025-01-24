@@ -154,6 +154,7 @@ alias gsw="git switch"
 alias gta="git tag"
 alias ls="eza"
 alias pr="gh pr create --template PULL_REQUEST_TEMPLATE.md --title"
+alias session="abduco -e '^D' -A main $SHELL"
 
 #
 # HISTORY
