@@ -8,10 +8,10 @@ cargo binstall bat du-dust eza fd-find git-delta just procs ripgrep tokei zoxide
 
 case $(uname -s) in
   "Darwin")
-    brew install direnv fzf neovim tmux
+    brew install direnv fzf neovim
     ;;
   "Linux")
-    sudo apt-get update && sudo apt-get install direnv fzf neovim tmux
+    sudo apt-get update && sudo apt-get install direnv fzf neovim
     ;;
 esac
 
@@ -21,7 +21,6 @@ ln -sf $(pwd)/bat                         $HOME/.config
 ln -sf $(pwd)/direnv                      $HOME/.config
 ln -sf $(pwd)/nvim                        $HOME/.config
 ln -sf $(pwd)/ripgrep                     $HOME/.config
-ln -sf $(pwd)/tmux/tmux.conf              $HOME/.tmux.conf
 ln -sf $(pwd)/zsh/zsh-syntax-highlighting $HOME/.zsh-syntax-highlighting
 ln -sf $(pwd)/zsh/zshrc                   $HOME/.zshrc
 ln -sf $(pwd)/zsh/zprofile                $HOME/.zprofile
