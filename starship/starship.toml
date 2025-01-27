@@ -1114,12 +1114,3 @@ disabled = false
 detect_extensions = ["zig"]
 detect_files = []
 detect_folders = []
-
-[custom]
-
-[custom.abduco]
-command = "echo -n $ABDUCO_SESSION"
-when = "test -n \"$ABDUCO_SESSION\""
-style = "bold blue"
-symbol = "⛺"
-format = "[$symbol$output]($style) "
