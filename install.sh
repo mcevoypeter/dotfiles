@@ -8,7 +8,8 @@ cargo binstall bat du-dust eza fclones fd-find git-delta just procs ripgrep toke
 
 case $(uname -s) in
   "Darwin")
-    brew install direnv fzf neovim tmux
+    # Tmux 3.5a is broken on Alacritty + macOS at the time of writing (27 Jan 2025).
+    brew install direnv fzf neovim tmux/tmux.rb && brew pin tmux
     ;;
   "Linux")
     sudo apt-get update && sudo apt-get install direnv fzf neovim tmux
