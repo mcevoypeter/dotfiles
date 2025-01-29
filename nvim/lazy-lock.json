@@ -10,6 +10,7 @@
   "nnn.nvim": { "branch": "master", "commit": "662034c73718885ee599ad9fb193ab1ede70fbcb" },
   "nvim-lspconfig": { "branch": "master", "commit": "85afd4b936acd62b578c2e2d8e86541fb972c32e" },
   "oil.nvim": { "branch": "master", "commit": "7a782c9a9cb7a16ec52199e55a1e892262c5dbbc" },
+  "vim-commentary": { "branch": "master", "commit": "64a654ef4a20db1727938338310209b6a63f60c9" },
   "vim-eunuch": { "branch": "master", "commit": "6c6af39aa0a25223389607338ae965c5dfc7c972" },
   "vim-fugitive": { "branch": "master", "commit": "d4877e54cef67f5af4f950935b1ade19ed6b7370" },
   "vim-rsi": { "branch": "master", "commit": "45540637ead22f011e8215f1c90142e49d946a54" }
