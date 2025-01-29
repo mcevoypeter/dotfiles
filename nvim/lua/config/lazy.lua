@@ -169,6 +169,13 @@ require("lazy").setup({
       end
     },
     {
+      "OXY2DEV/markview.nvim",
+      lazy = false,
+      config = function()
+        vim.cmd("nnoremap <Leader>m :Markview Toggle<CR>")
+      end
+    },
+    {
       "sindrets/diffview.nvim",
       config = function()
         local diffview = require("diffview")
