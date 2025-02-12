@@ -1,0 +1,44 @@
+<!-- https://launchd.info/ -->
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>mcevoy.peter.example</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>echo</string>
+        <string>hello</string>
+        <string>world</string>
+    </array>
+    <key>WorkingDirectory</key>
+    <string>/tmp</string>
+    <key>StandardOutPath</key>
+    <string>/tmp/mcevoy.peter.example.stdout</string>
+    <key>StandardErrorPath</key>
+    <string>/tmp/mcevoy.peter.example.stderr</string>
+<!-- Run immediately
+    <key>RunAtLoad</key>
+    <true/>
+-->
+<-- Run on a schedule
+    <key>StartCalendarInterval</key>
+    <dict>
+      <!-- Month in which this job will run -->
+      <key>Month</key>
+      <integer>0</integer>
+      <!-- Day on which this job will be run. -->
+      <key>Day</key>
+      <integer>0</integer>
+      <!-- Weekday on which this job will be run (0 and 7 are Sunday). -->
+      <key>Weekday</key>
+      <integer>0</integer>
+      <!-- Hour on which this job will be run. -->
+      <key>Hour</key>
+      <integer>0</integer>
+      <!-- Minute on which this job will be run. -->
+      <key>Minute</key>
+      <integer>0</integer>
+    </dict>
+</plist>
