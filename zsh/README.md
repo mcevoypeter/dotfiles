@@ -12,7 +12,6 @@ Install the following tools:
 - [`node`]
 - [`nvm`]
 - [`pyenv`]
-- [`starship`]
 - [`zoxide`]
 
 ```console
@@ -33,6 +32,5 @@ ln -sf $(pwd)/zsh-syntax-highlighting ~/.zsh-syntax-highlighting
 [`node`]: https://github.com/nodejs/node
 [`nvm`]: https://github.com/nvm-sh/nvm
 [`pyenv`]: https://github.com/pyenv/pyenv
-[`starship`]: https://github.com/starship/starship
 [`zoxide`]: https://github.com/ajeetdsouza/zoxide
 [Zsh]: https://zsh.sourceforge.io/
