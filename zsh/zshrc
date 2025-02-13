@@ -10,25 +10,6 @@ function git_grep() {
   git grep -e "$1" -n $(git rev-list --all --abbrev-commit)
 }
 
-function load_nvmrc() {
-  local nvmrc_path
-  nvmrc_path="$(nvm_find_nvmrc)"
-
-  if [ -n "$nvmrc_path" ]; then
-    local nvmrc_node_version
-    nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
-
-    if [ "$nvmrc_node_version" = "N/A" ]; then
-      nvm install
-    elif [ "$nvmrc_node_version" != "$(nvm version)" ]; then
-      nvm use
-    fi
-  elif [ -n "$(PWD=$OLDPWD nvm_find_nvmrc)" ] && [ "$(nvm version)" != "$(nvm version default)" ]; then
-    echo "Reverting to nvm default version"
-    nvm use default
-  fi
-}
-
 # Select an environment variable.
 function zle_env_var() {
   local env_var=$(printenv                                                     \
@@ -231,17 +212,11 @@ bindkey -M viins '^N' zle_nvim
 zle -N zle_ps
 bindkey -M viins '^P' zle_ps
 
-# Enable Zsh hooks.
-autoload -U add-zsh-hook
-
 # Enable `git` tab-complete.
 autoload -Uz +X compinit && compinit
 
 # Enable `nvm` tab-complete.
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-# Must be called after `nvm` initialization.
-add-zsh-hook chpwd load_nvmrc
-load_nvmrc
 
 eval "$(direnv hook zsh)"
 eval "$(pyenv init -)"
