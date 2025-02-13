@@ -129,6 +129,7 @@ function zle_ps() {
 alias ai="aider_"
 alias av="action-validator"
 alias cat="bat"
+alias cd="cdi"
 alias gad="git add"
 alias gap="git apply"
 alias gbi="git bisect"
