@@ -116,13 +116,6 @@ require("lazy").setup({
       end,
     },
     {
-      "lukas-reineke/indent-blankline.nvim",
-      main = "ibl",
-      ---@module "ibl"
-      ---@type ibl.config
-      opts = {},
-    },
-    {
       "neovim/nvim-lspconfig",
       config = function()
         -- see https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
