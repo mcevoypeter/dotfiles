@@ -185,9 +185,6 @@ require("lazy").setup({
       dependencies = { { "echasnovski/mini.icons", opts = {} } },
     },
     {
-      "tpope/vim-commentary",
-    },
-    {
       "tpope/vim-eunuch",
     },
     {
