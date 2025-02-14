@@ -91,11 +91,6 @@ vim.cmd([[
   nnoremap <C-P> :bprevious<CR>
 ]])
 
--- quickfix list
-vim.cmd([[
-  nnoremap <Leader>l :copen<CR>
-]])
-
 -- Auto-reload files when modified externally. See
 -- https://neovim.discourse.group/t/a-lua-based-auto-refresh-buffers-when-they-change-on-disk-function/2482
 vim.o.autoread = true
