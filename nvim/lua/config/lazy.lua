@@ -78,6 +78,7 @@ require("lazy").setup({
         end
 
         vim.cmd([[
+          nnoremap <Leader>/ :History/<CR>
           nnoremap <Leader>b :Buffers<CR>
           nnoremap <Leader>f :Files<CR>
           nnoremap <Leader>r :History:<CR>
