@@ -91,9 +91,6 @@ vim.cmd([[
   nnoremap <C-P> :bprevious<CR>
 ]])
 
--- Reload the current buffer.
-vim.cmd("nnoremap <Leader>r :edit! %<CR>")
-
 -- quickfix list
 vim.cmd([[
   nnoremap <Leader>l :copen<CR>
