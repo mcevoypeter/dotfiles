@@ -85,6 +85,7 @@ require("lazy").setup({
           nnoremap <Leader>g :BCommits<CR>
           vnoremap <Leader>g :BCommits<CR>
           nnoremap <Leader>G :Commits<CR>
+          nnoremap <Leader>h :History<CR>
           nnoremap <Leader>r :History:<CR>
           nnoremap <Leader>s :Rg<CR>
           nnoremap <Leader>w :Windows<CR>
