@@ -18,13 +18,17 @@ function zle_env_var() {
   [[ -n "$env_var" ]] && zle -U "\$$env_var"
 }
 
-# Select a Git branch.
-function zle_git_branch() {
-  local branch=$(git branch                                                    \
+# Select a Git branch or tag.
+function zle_git_ref() {
+  local branch_icon='\\ue725'
+  local branches=$(git branch                                                  \
     | tr -d '*'                                                                \
     | awk '{ print $1 }'                                                       \
-    | fzf_cmd)
-  [[ -n "$branch" ]] && zle -U "$branch"
+    | sed "s|^|$branch_icon |")
+  local tag_icon='\\uf412'
+  local tags=$(git tag | sed "s|^|$tag_icon |")
+  local ref=$(echo $branches $tags | fzf_cmd)
+  [[ -n "$ref" ]] && zle -U $(awk '{ print $2 }' <<< "$ref")
 }
 
 # Select a Git commit.
@@ -182,9 +186,9 @@ bindkey -M viins '' backward-delete-char
 zle -N zle_env_var
 bindkey -M viins '^K' zle_env_var
 
-# Access Git branches.
-zle -N zle_git_branch
-bindkey -M viins '^B' zle_git_branch
+# Access Git branches and tags.
+zle -N zle_git_ref
+bindkey -M viins '^B' zle_git_ref
 
 # Access Git commits.
 zle -N zle_git_commit
