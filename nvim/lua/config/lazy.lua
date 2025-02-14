@@ -80,6 +80,7 @@ require("lazy").setup({
         vim.cmd([[
           nnoremap <Leader>b :Buffers<CR>
           nnoremap <Leader>f :Files<CR>
+          nnoremap <Leader>r :History:<CR>
           nnoremap <Leader>s :Rg<CR>
         ]])
 
