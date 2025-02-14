@@ -83,6 +83,7 @@ require("lazy").setup({
           nnoremap <Leader>f :Files<CR>
           nnoremap <Leader>r :History:<CR>
           nnoremap <Leader>s :Rg<CR>
+          nnoremap <Leader>w :Windows<CR>
         ]])
 
         vim.g.fzf_layout = {
