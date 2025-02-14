@@ -80,7 +80,6 @@ function zle_ps() {
 
 alias av="action-validator"
 alias cat="bat"
-alias cd="cdi"
 alias gad="git add"
 alias gap="git apply"
 alias gbi="git bisect"
