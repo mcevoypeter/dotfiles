@@ -78,17 +78,17 @@ require("lazy").setup({
         end
 
         vim.cmd([[
-          nnoremap <Leader>/ :History/<CR>
-          nnoremap <Leader>; :Commands<CR>
-          nnoremap <Leader>b :Buffers<CR>
-          nnoremap <Leader>f :Files<CR>
-          nnoremap <Leader>g :BCommits<CR>
-          vnoremap <Leader>g :BCommits<CR>
-          nnoremap <Leader>G :Commits<CR>
-          nnoremap <Leader>h :History<CR>
-          nnoremap <Leader>r :History:<CR>
-          nnoremap <Leader>s :Rg<CR>
-          nnoremap <Leader>w :Windows<CR>
+          nnoremap <Leader>/ :History/!<CR>
+          nnoremap <Leader>; :Commands!<CR>
+          nnoremap <Leader>b :Buffers!<CR>
+          nnoremap <Leader>f :Files!<CR>
+          nnoremap <Leader>g :BCommits!<CR>
+          vnoremap <Leader>g :BCommits!<CR>
+          nnoremap <Leader>G :Commits!<CR>
+          nnoremap <Leader>h :History!<CR>
+          nnoremap <Leader>r :History:!<CR>
+          nnoremap <Leader>s :Rg!<CR>
+          nnoremap <Leader>w :Windows!<CR>
         ]])
 
         vim.g.fzf_layout = {
