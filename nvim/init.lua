@@ -5,10 +5,7 @@ vim.cmd("set nocompatible")
 vim.cmd("colorscheme quiet")
 
 -- line numbering
-vim.cmd([[
-  set number
-  set relativenumber
-]])
+vim.cmd("set relativenumber")
 
 -- Clear <C-T> so it can be used as the tmux prefix.
 vim.cmd("nnoremap <C-T> <Nop>")
