@@ -34,8 +34,8 @@ vim.cmd([[
 -- Enable intuitive backspace behavior in insert mode.
 vim.cmd("set backspace=indent,eol,start")
 
--- Always show status line.
-vim.cmd("set laststatus=2")
+-- Show a global statusline.
+vim.cmd("set laststatus=3")
 
 -- Fold based on indentation.
 vim.cmd("set foldmethod=indent")
