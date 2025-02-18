@@ -94,7 +94,7 @@ require("lazy").setup({
         vim.g.fzf_layout = {
           window = {
             width = 1.0,
-            height = 0.25,
+            height = 0.8,
             relative = true,
             yoffset = 1.0
           }
