@@ -34,6 +34,7 @@ ln -sf $(pwd)/aider/aider.conf.yml        $HOME/.aider.conf.yml
 ln -sf $(pwd)/alacritty                   $HOME/.config
 ln -sf $(pwd)/bat                         $HOME/.config
 ln -sf $(pwd)/direnv                      $HOME/.config
+ln -sf $(pwd)/himalaya                    $HOME/.config
 ln -sf $(pwd)/nvim                        $HOME/.config
 ln -sf $(pwd)/ripgrep                     $HOME/.config
 ln -sf $(pwd)/starship/starship.toml      $HOME/.config
