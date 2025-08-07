@@ -1,5 +1,6 @@
 {
   "diffview.nvim": { "branch": "main", "commit": "4516612fe98ff56ae0415a259ff6361a89419b0a" },
+  "editorconfig-vim": { "branch": "master", "commit": "6a58b7c11f79c0e1d0f20533b3f42f2a11490cf8" },
   "fzf": { "branch": "master", "commit": "3c40b1bd51a895a907dbae5d30f6d9e99bdc1f90" },
   "fzf.vim": { "branch": "master", "commit": "ec75ffbfd50630bf2b8d444d89487e149bacf7f3" },
   "himalaya-vim": { "branch": "master", "commit": "bb8d0ebbe82b1ba1d487354fab86d81f12a82c4d" },

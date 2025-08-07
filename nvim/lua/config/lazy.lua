@@ -23,6 +23,9 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
   spec = {
     {
+      "editorconfig/editorconfig-vim",
+    },
+    {
       "itchyny/lightline.vim",
       config = function()
         vim.g.lightline = {
