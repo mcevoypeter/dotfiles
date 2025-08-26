@@ -129,7 +129,13 @@ zstyle ':vcs_info:git:*' formats ${git_branch}
 zstyle ':vcs_info:*' enable git
 setopt prompt_subst
 local user='%B%n%b'
-local host='%B%F{magenta}%m%f%b'
+local host=''
+if [[ -n "$SSH_CONNECTION" || -n "$SSH_CLIENT" ]]
+then
+  host='%F{red}ssh%f<%B%F{red}%m%f%b%>'
+else
+  host='%B%F{magenta}%m%f%b'
+fi
 local dir='%B%F{cyan}%3~%f%b'
 PROMPT='${user}@${host}:${dir} $vcs_info_msg_0_
 %(?.%F{green}.%F{red})%#%f '
