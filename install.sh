@@ -9,10 +9,24 @@ cargo binstall bat du-dust eza fclones fd-find git-delta just procs ripgrep toke
 case $(uname -s) in
   "Darwin")
     # Tmux 3.5a is broken on Alacritty + macOS at the time of writing (27 Jan 2025).
-    brew install direnv fzf neovim tmux/tmux.rb && brew pin tmux
+    brew install direnv fzf go neovim pyenv tmux/tmux.rb && brew pin tmux
     ;;
   "Linux")
-    sudo apt-get update && sudo apt-get install direnv fzf neovim tmux
+    sudo apt-get update && sudo apt-get install direnv fzf golang-go tmux
+
+    # Install Neovim
+    nvim_version=0.11.3
+    nvim_archive=nvim-linux-x86_64
+    wget -O $nvim_archive.tar.gz https://github.com/neovim/neovim/releases/download/v$nvim_version/nvim-linux-x86_64.tar.gz
+    tar xzvf $nvim_archive.tar.gz
+    sudo mv $nvim_archive /usr/local/nvim && sudo ln -s /usr/local/nvim/bin/nvim /usr/local/bin/nvim
+    rm -rf $nvim_archive && rm $nvim_archive.tar.gz
+
+    # Install pyenv
+    sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev \
+      libreadline-dev libsqlite3-dev wget curl llvm libncursesw5-dev xz-utils tk-dev \
+      libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev \
+      && (curl https://pyenv.run | bash)
     ;;
 esac
 

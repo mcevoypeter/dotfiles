@@ -1,3 +1,5 @@
+export PYENV_ROOT="$HOME/.pyenv"
+
 case $(uname -s) in
   "Darwin")
     export ANDROID_HOME="$HOME/Library/Android/sdk"
@@ -7,6 +9,7 @@ case $(uname -s) in
     export PATH="$PATH:$ANDROID_HOME/platform-tools"
     ;;
   "Linux")
+    export PATH="$PYENV_ROOT/bin:$PATH"
     # see https://forums.ankiweb.net/t/anki-doesnt-start-under-wayland-linux/10409
     export QT_QPA_PLATFORM=xcb
     export XDG_CURRENT_DESKTOP="sway"
@@ -30,6 +33,5 @@ export KEYTIMEOUT=1
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
-export PYENV_ROOT="$HOME/.pyenv"
 export RIPGREP_CONFIG_PATH="$HOME/.config/ripgrep/ripgreprc"
 export TERM="tmux-256color"
