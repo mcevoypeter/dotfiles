@@ -35,3 +35,5 @@ export NVM_DIR="$HOME/.nvm"
 
 export RIPGREP_CONFIG_PATH="$HOME/.config/ripgrep/ripgreprc"
 export TERM="tmux-256color"
+
+export PATH="$HOME/.elan/bin:$PATH"

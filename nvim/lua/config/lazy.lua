@@ -67,6 +67,17 @@ require("lazy").setup({
       end,
     },
     {
+      "Julian/lean.nvim",
+      event = { "BufReadPre *.lean", "BufNewFile *.lean" },
+
+      dependencies = {},
+      ---@type lean.Config
+      opts = {
+        mappings = true,
+        lsp = { enable = false },
+      }
+    },
+    {
       "junegunn/fzf.vim",
       dependencies = { "junegunn/fzf" }, -- Install fzf as a dependency
       build = function()
@@ -129,37 +140,54 @@ require("lazy").setup({
     {
       "neovim/nvim-lspconfig",
       config = function()
-        -- see https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
-
-        local lspconfig = require("lspconfig")
         vim.keymap.set('n', 'K', vim.lsp.buf.hover)
 
         -- npm i -g bash-language-server
-        lspconfig.bashls.setup{}
+        vim.lsp.config('bashls', {})
 
         -- npm install -g dockerfile-language-server-nodejs
-        lspconfig.dockerls.setup{}
+        vim.lsp.config('dockerls', {})
 
         -- npm i -g vscode-langservers-extracted
-        lspconfig.jsonls.setup{}
+        vim.lsp.config('jsonls', {})
 
         -- npm install -g pyright
-        lspconfig.pyright.setup{}
+        vim.lsp.config('pyright', {})
 
         -- rustup component add rust-analyzer
-        lspconfig.rust_analyzer.setup{}
+        vim.lsp.config('rust_analyzer', {})
 
         -- Swift and C/C++/Objective-C
-        lspconfig.sourcekit.setup{}
+        vim.lsp.config('sourcekit', {})
 
         -- npm install -g @tailwindcss/language-server
-        lspconfig.tailwindcss.setup{}
+        vim.lsp.config('tailwindcss', {})
 
         -- brew install hashicorp/tap/terraform-ls
-        lspconfig.terraformls.setup{}
+        vim.lsp.config('terraformls', {})
 
         -- npm i -g typescript typescript-language-server
-        lspconfig.ts_ls.setup{}
+        vim.lsp.config('ts_ls', {})
+
+        -- lean4 (managed by lean.nvim plugin, LSP started here)
+        vim.lsp.config('leanls', {
+          cmd = { 'lake', 'serve' },
+          filetypes = { 'lean' },
+          root_markers = { 'lakefile.lean', 'lakefile.toml', 'lean-toolchain', 'leanpkg.toml' },
+        })
+
+        vim.lsp.enable({
+          'bashls',
+          'dockerls',
+          'jsonls',
+          'leanls',
+          'pyright',
+          'rust_analyzer',
+          'sourcekit',
+          'tailwindcss',
+          'terraformls',
+          'ts_ls',
+        })
       end
     },
     {
