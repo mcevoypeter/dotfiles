@@ -1,0 +1,31 @@
+#!/bin/sh
+path="${1# }"
+path="${path#\"}"; path="${path#\'}"; path="${path#\`}"; path="${path#(}"; path="${path#[}"
+
+case "$path" in
+  *:*:*) file="${path%%:*}"; rest="${path#*:}"; line="${rest%%:*}"; flag="+$line" ;;
+  *:*)   file="${path%%:*}"; line="${path#*:}"; flag="+$line" ;;
+  *)     file="$path"; flag="" ;;
+esac
+
+TMUX_BIN=/opt/homebrew/bin/tmux
+NVIM_BIN=/opt/homebrew/bin/nvim
+ALACRITTY_BIN=/Applications/Alacritty.app/Contents/MacOS/alacritty
+
+if "$TMUX_BIN" list-clients 2>/dev/null | grep -q .; then
+  cmd=$("$TMUX_BIN" display-message -p '#{pane_current_command}')
+  case "$cmd" in
+    nvim|vim)
+      if [ -n "$flag" ]; then
+        "$TMUX_BIN" send-keys Escape ":edit $flag $file" Enter
+      else
+        "$TMUX_BIN" send-keys Escape ":edit $file" Enter
+      fi
+      ;;
+    *)
+      "$TMUX_BIN" send-keys "nvim $flag $file" Enter
+      ;;
+  esac
+else
+  "$ALACRITTY_BIN" -e "$NVIM_BIN" $flag "$file"
+fi

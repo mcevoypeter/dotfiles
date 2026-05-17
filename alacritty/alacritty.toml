@@ -6,3 +6,11 @@ bold_italic = { family = "Hack Nerd Font Mono", style = "Bold Italic" }
 
 [window]
 option_as_alt = "Both"
+
+[[hints.enabled]]
+regex = "(^|[\\s\"'`(\\[])(/|~/)[\\w./\\-]+(:\\d+(:\\d+)?)?"
+command = { program = "/Users/peter/.local/bin/alacritty-tmux-nvim", args = [] }
+post_processing = true
+persist = false
+mouse = { enabled = true, mods = "Control" }
+binding = { key = "F", mods = "Control|Shift" }

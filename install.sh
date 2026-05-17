@@ -30,15 +30,16 @@ case $(uname -s) in
     ;;
 esac
 
-ln -sf $(pwd)/aider/aider.conf.yml        $HOME/.aider.conf.yml
-ln -sf $(pwd)/alacritty                   $HOME/.config
-ln -sf $(pwd)/bat                         $HOME/.config
-ln -sf $(pwd)/direnv                      $HOME/.config
-ln -sf $(pwd)/himalaya                    $HOME/.config
-ln -sf $(pwd)/nvim                        $HOME/.config
-ln -sf $(pwd)/ripgrep                     $HOME/.config
-ln -sf $(pwd)/starship/starship.toml      $HOME/.config
-ln -sf $(pwd)/tmux/tmux.conf              $HOME/.tmux.conf
-ln -sf $(pwd)/zsh/zsh-syntax-highlighting $HOME/.zsh-syntax-highlighting
-ln -sf $(pwd)/zsh/zshrc                   $HOME/.zshrc
-ln -sf $(pwd)/zsh/zprofile                $HOME/.zprofile
+ln -sf $(pwd)/aider/aider.conf.yml          $HOME/.aider.conf.yml
+ln -sf $(pwd)/alacritty                     $HOME/.config
+ln -sf $(pwd)/alacritty/alacritty-tmux-nvim $HOME/.local/bin
+ln -sf $(pwd)/bat                           $HOME/.config
+ln -sf $(pwd)/direnv                        $HOME/.config
+ln -sf $(pwd)/himalaya                      $HOME/.config
+ln -sf $(pwd)/nvim                          $HOME/.config
+ln -sf $(pwd)/ripgrep                       $HOME/.config
+ln -sf $(pwd)/starship/starship.toml        $HOME/.config
+ln -sf $(pwd)/tmux/tmux.conf                $HOME/.tmux.conf
+ln -sf $(pwd)/zsh/zsh-syntax-highlighting   $HOME/.zsh-syntax-highlighting
+ln -sf $(pwd)/zsh/zshrc                     $HOME/.zshrc
+ln -sf $(pwd)/zsh/zprofile                  $HOME/.zprofile
