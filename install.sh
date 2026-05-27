@@ -4,7 +4,7 @@ which cargo || curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 cargo install cargo-binstall
 
-cargo binstall bat du-dust eza fclones fd-find git-delta jj-cli just procs ripgrep tokei zoxide
+cargo binstall bat du-dust eza fclones fd-find git-delta jj-cli just procs tokei zoxide
 
 case $(uname -s) in
   "Darwin")
@@ -36,6 +36,5 @@ ln -sf $(pwd)/bat                         $HOME/.config
 ln -sf $(pwd)/direnv                      $HOME/.config
 ln -sf $(pwd)/himalaya                    $HOME/.config
 ln -sf $(pwd)/nvim                        $HOME/.config
-ln -sf $(pwd)/ripgrep                     $HOME/.config
 ln -sf $(pwd)/starship/starship.toml      $HOME/.config
 ln -sf $(pwd)/tmux/tmux.conf              $HOME/.tmux.conf

@@ -4,5 +4,8 @@
   home.stateVersion = "25.05";
   home.enableNixpkgsReleaseCheck = false;
 
-  imports = [ ./zsh ];
+  imports = [
+    ./ripgrep
+    ./zsh
+  ];
 }
