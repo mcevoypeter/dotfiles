@@ -5,6 +5,7 @@
   home.enableNixpkgsReleaseCheck = false;
 
   imports = [
+    ./alacritty
     ./bat
     ./direnv
     ./ripgrep
