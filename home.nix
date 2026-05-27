@@ -17,6 +17,7 @@
     ./go
     ./jj
     ./just
+    ./nvim
     ./procs
     ./ripgrep
     ./rust
