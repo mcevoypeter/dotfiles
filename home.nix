@@ -6,6 +6,7 @@
 
   imports = [
     ./bat
+    ./direnv
     ./ripgrep
     ./zsh
   ];
