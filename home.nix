@@ -5,6 +5,7 @@
   home.enableNixpkgsReleaseCheck = false;
 
   imports = [
+    ./bat
     ./ripgrep
     ./zsh
   ];
