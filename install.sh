@@ -32,4 +32,3 @@ esac
 
 ln -sf $(pwd)/himalaya                    $HOME/.config
 ln -sf $(pwd)/nvim                        $HOME/.config
-ln -sf $(pwd)/starship/starship.toml      $HOME/.config
