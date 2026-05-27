@@ -198,9 +198,6 @@ require("lazy").setup({
       end
     },
     {
-      "pimalaya/himalaya-vim",
-    },
-    {
       "sindrets/diffview.nvim",
       config = function()
         local diffview = require("diffview")
