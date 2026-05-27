@@ -1,5 +1,4 @@
 *.local
 *.session.vim
-.aider*
 .env
 page.html
