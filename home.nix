@@ -1,4 +1,4 @@
-{ ... }: {
+{ lib, ... }: {
   home.username = "peter";
   home.homeDirectory = "/Users/peter";
   home.stateVersion = "25.05";
@@ -21,6 +21,7 @@
     ./procs
     ./ripgrep
     ./rust
+    ./sway
     ./tmux
     ./tokei
     ./zoxide
