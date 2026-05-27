@@ -39,6 +39,3 @@ ln -sf $(pwd)/nvim                        $HOME/.config
 ln -sf $(pwd)/ripgrep                     $HOME/.config
 ln -sf $(pwd)/starship/starship.toml      $HOME/.config
 ln -sf $(pwd)/tmux/tmux.conf              $HOME/.tmux.conf
-ln -sf $(pwd)/zsh/zsh-syntax-highlighting $HOME/.zsh-syntax-highlighting
-ln -sf $(pwd)/zsh/zshrc                   $HOME/.zshrc
-ln -sf $(pwd)/zsh/zprofile                $HOME/.zprofile
