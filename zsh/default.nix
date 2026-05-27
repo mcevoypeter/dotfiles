@@ -210,8 +210,7 @@
       export NVM_DIR="$HOME/.nvm"
       [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
-      export RIPGREP_CONFIG_PATH="$HOME/.config/ripgrep/ripgreprc"
-      export TERM="tmux-256color"
+export TERM="tmux-256color"
 
       source $HOME/.elan/env
       export PATH="$HOME/.verus/verus:$PATH"
