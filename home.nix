@@ -7,9 +7,22 @@
   imports = [
     ./alacritty
     ./bat
+    ./delta
     ./direnv
+    ./dust
+    ./eza
+    ./fclones
+    ./fd
+    ./fzf
+    ./go
+    ./jj
+    ./just
+    ./procs
     ./ripgrep
+    ./rust
     ./tmux
+    ./tokei
+    ./zoxide
     ./zsh
   ];
 }

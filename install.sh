@@ -1,18 +1,12 @@
 #!/usr/bin/env bash
 
-which cargo || curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-
-cargo install cargo-binstall
-
-cargo binstall du-dust eza fclones fd-find git-delta jj-cli just procs tokei zoxide
-
 case $(uname -s) in
   "Darwin")
     # Tmux 3.5a is broken on Alacritty + macOS at the time of writing (27 Jan 2025).
-    brew install fzf go neovim pyenv
+    brew install neovim pyenv
     ;;
   "Linux")
-    sudo apt-get update && sudo apt-get install fzf golang-go
+    sudo apt-get update
 
     # Install Neovim
     nvim_version=0.11.3
