@@ -8,6 +8,7 @@
     ./bat
     ./direnv
     ./ripgrep
+    ./tmux
     ./zsh
   ];
 }

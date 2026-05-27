@@ -9,10 +9,10 @@ cargo binstall du-dust eza fclones fd-find git-delta jj-cli just procs tokei zox
 case $(uname -s) in
   "Darwin")
     # Tmux 3.5a is broken on Alacritty + macOS at the time of writing (27 Jan 2025).
-    brew install fzf go neovim pyenv tmux/tmux.rb && brew pin tmux
+    brew install fzf go neovim pyenv
     ;;
   "Linux")
-    sudo apt-get update && sudo apt-get install fzf golang-go tmux
+    sudo apt-get update && sudo apt-get install fzf golang-go
 
     # Install Neovim
     nvim_version=0.11.3
@@ -35,4 +35,3 @@ ln -sf $(pwd)/alacritty                   $HOME/.config
 ln -sf $(pwd)/himalaya                    $HOME/.config
 ln -sf $(pwd)/nvim                        $HOME/.config
 ln -sf $(pwd)/starship/starship.toml      $HOME/.config
-ln -sf $(pwd)/tmux/tmux.conf              $HOME/.tmux.conf
