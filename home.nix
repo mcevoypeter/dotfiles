@@ -19,6 +19,7 @@
     ./just
     ./nvim
     ./procs
+    ./pyenv
     ./ripgrep
     ./rust
     ./sway
