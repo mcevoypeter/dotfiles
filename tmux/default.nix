@@ -1,7 +1,7 @@
 { ... }: {
   programs.tmux = {
     enable = true;
-    prefix = "C-T";
+    prefix = "C-t";
     mouse = false;
     terminal = "tmux-256color";
     escapeTime = 10;
@@ -17,25 +17,25 @@
 
       # Windows
       unbind-key f
-      bind-key C-F command-prompt "find-window -Z -- '%%'"
+      bind-key C-f command-prompt "find-window -Z -- '%%'"
       unbind-key c
-      bind-key C-O new-window
+      bind-key C-o new-window
       unbind-key n
-      bind-key C-N next-window
+      bind-key C-n next-window
       unbind-key p
-      bind-key C-P previous-window
+      bind-key C-p previous-window
       unbind-key ,
       bind-key N command-prompt -I "#W" "rename-window -- '%%'"
 
       # Panes
       unbind-key %
-      bind-key C-V split-window -h
+      bind-key C-v split-window -h
       unbind-key '"'
-      bind-key C-S split-window -v
-      bind-key C-K select-pane -U
-      bind-key C-L select-pane -R
-      bind-key C-J select-pane -D
-      bind-key C-H select-pane -L
+      bind-key C-s split-window -v
+      bind-key C-k select-pane -U
+      bind-key C-l select-pane -R
+      bind-key C-j select-pane -D
+      bind-key C-h select-pane -L
       bind-key -r k resize-pane -U 1
       bind-key -r l resize-pane -R 1
       bind-key -r j resize-pane -D 1
@@ -44,11 +44,11 @@
       bind-key -r L resize-pane -R 5
       bind-key -r J resize-pane -D 5
       bind-key -r H resize-pane -L 5
-      bind-key C-T resize-pane -Z
+      bind-key C-t resize-pane -Z
       unbind-key x
-      bind-key C-Q kill-pane
-      unbind-key C-C
-      bind-key C-C set-window-option synchronize-panes
+      bind-key C-q kill-pane
+      unbind-key C-c
+      bind-key C-c set-window-option synchronize-panes
 
       set -g window-style "bg=#2a2a2a"
       set -g window-active-style "bg=#000000"
