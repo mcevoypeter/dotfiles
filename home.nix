@@ -6,6 +6,7 @@
 
   imports = [
     ./alacritty
+    ./aws
     ./bat
     ./delta
     ./direnv
