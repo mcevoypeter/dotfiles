@@ -10,7 +10,7 @@
     keyMode = "vi";
 
     extraConfig = ''
-      bind-key C-R source $HOME/.tmux.conf
+      bind-key C-r source-file $HOME/.config/tmux/tmux.conf
 
       set-window-option -g pane-base-index 1
       set-option -g renumber-windows on
