@@ -195,7 +195,7 @@
       esac
 
       export GOPATH="$(go env GOPATH)"
-      export PATH="$GOPATH/bin:$NVM_BIN:$HOME/.cargo/bin:$HOME/.local/bin:$PATH"
+      export PATH="$HOME/.dataland/bin:$GOPATH/bin:$NVM_BIN:$HOME/.cargo/bin:$HOME/.local/bin:$PATH"
 
       export EDITOR=$(which nvim)
       export FZF_DEFAULT_COMMAND="fd --hidden --no-ignore"
