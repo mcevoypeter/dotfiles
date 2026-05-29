@@ -14,6 +14,7 @@
     ./fclones
     ./fd
     ./fzf
+    ./gcloud
     ./go
     ./jj
     ./just
