@@ -19,6 +19,7 @@
     ./go
     ./jj
     ./just
+    ./node
     ./nvim
     ./procs
     ./pyenv
