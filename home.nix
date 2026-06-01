@@ -30,6 +30,7 @@
     ./tmux
     ./tokei
     ./uv
+    ./yq
     ./zoxide
     ./zsh
   ];
