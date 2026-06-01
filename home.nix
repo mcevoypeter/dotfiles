@@ -17,6 +17,7 @@
     ./fzf
     ./gcloud
     ./go
+    ./gws
     ./jj
     ./jq
     ./just
