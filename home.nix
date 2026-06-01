@@ -18,6 +18,7 @@
     ./gcloud
     ./go
     ./jj
+    ./jq
     ./just
     ./node
     ./nvim
