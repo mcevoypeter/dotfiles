@@ -23,6 +23,7 @@
     ./just
     ./node
     ./nvim
+    ./op
     ./procs
     ./pyenv
     ./ripgrep
