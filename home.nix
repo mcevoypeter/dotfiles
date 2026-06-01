@@ -28,6 +28,7 @@
     ./sway
     ./tmux
     ./tokei
+    ./uv
     ./zoxide
     ./zsh
   ];
