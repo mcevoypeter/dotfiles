@@ -16,6 +16,7 @@
     ./fd
     ./fzf
     ./gcloud
+    ./gh
     ./go
     ./gws
     ./jj
