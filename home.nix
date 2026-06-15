@@ -30,6 +30,7 @@
     ./ripgrep
     ./rust
     ./sway
+    ./syncthing
     ./tmux
     ./tokei
     ./uv
