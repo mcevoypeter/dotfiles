@@ -10,6 +10,7 @@
     ./bat
     ./delta
     ./direnv
+    ./duckdb
     ./dust
     ./eza
     ./fclones
