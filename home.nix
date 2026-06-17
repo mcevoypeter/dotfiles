@@ -27,6 +27,7 @@
     ./nvim
     ./op
     ./pnpm
+    ./postgres
     ./procs
     ./pyenv
     ./ripgrep
