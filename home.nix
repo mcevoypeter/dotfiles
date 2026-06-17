@@ -32,6 +32,7 @@
     ./pyenv
     ./ripgrep
     ./rust
+    ./sqlite
     ./sway
     ./syncthing
     ./tmux
