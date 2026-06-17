@@ -42,5 +42,6 @@
     ./yq
     ./zoxide
     ./zsh
+    ./zstd
   ];
 }
