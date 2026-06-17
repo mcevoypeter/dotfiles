@@ -8,6 +8,7 @@
     ./alacritty
     ./aws
     ./bat
+    ./cloudflared
     ./delta
     ./direnv
     ./duckdb
