@@ -25,6 +25,7 @@
     ./node
     ./nvim
     ./op
+    ./pnpm
     ./procs
     ./pyenv
     ./ripgrep
