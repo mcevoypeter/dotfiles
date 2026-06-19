@@ -16,6 +16,7 @@
     ./eza
     ./fclones
     ./fd
+    ./ffmpeg
     ./fzf
     ./gcloud
     ./gh
