@@ -20,6 +20,7 @@
     ./fzf
     ./gcloud
     ./gh
+    ./git-lfs
     ./go
     ./gws
     ./jj
