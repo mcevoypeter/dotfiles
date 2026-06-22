@@ -66,6 +66,32 @@
         git grep -e "$1" -n $(git rev-list --all --abbrev-commit)
       }
 
+      # nvim as a pipeline filter. nvim renders its TUI to stdout, so it is
+      # pinned to /dev/tty here and never collides with the data streams.
+      # _nvim_pipe <read-stdin?> <out-fd>: seed the buffer from stdin when arg1
+      # is 1, then emit the saved buffer to fd arg2 (0 = nowhere).
+      #   nvim0 : stdin -> edit -> (nothing)   (cmd | nvim0)
+      #   nvim1 : fresh -> edit -> stdout      (nvim1 | next)
+      #   nvim2 : fresh -> edit -> stderr      (nvim2 2> out)
+      #   nvim01: stdin -> edit -> stdout      (cmd | nvim01 | next)
+      #   nvim02: stdin -> edit -> stderr      (cmd | nvim02 2> out)
+      function _nvim_pipe() {
+        local rd=$1 out=$2 tmp
+        tmp=$(mktemp)
+        [ "$rd" = 1 ] && [ ! -t 0 ] && cat > "$tmp"
+        nvim "$tmp" </dev/tty >/dev/tty 2>/dev/tty
+        case $out in
+          1) cat "$tmp" ;;
+          2) cat "$tmp" >&2 ;;
+        esac
+        rm -f "$tmp"
+      }
+      function nvim0()  { _nvim_pipe 1 0; }
+      function nvim1()  { _nvim_pipe 0 1; }
+      function nvim2()  { _nvim_pipe 0 2; }
+      function nvim01() { _nvim_pipe 1 1; }
+      function nvim02() { _nvim_pipe 1 2; }
+
       function zle_env_var() {
         local env_var=$(printenv \
           | awk -F '=' '{ print $1 }' \
