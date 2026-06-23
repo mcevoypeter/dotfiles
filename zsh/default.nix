@@ -68,14 +68,14 @@
 
       # nvim as a pipeline filter. nvim renders its TUI to stdout, so it is
       # pinned to /dev/tty here and never collides with the data streams.
-      # _nvim_pipe <read-stdin?> <out-fd>: seed the buffer from stdin when arg1
+      # _editor_pipe <read-stdin?> <out-fd>: seed the buffer from stdin when arg1
       # is 1, then emit the saved buffer to fd arg2 (0 = nowhere).
-      #   nvim0 : stdin -> edit -> (nothing)   (cmd | nvim0)
-      #   nvim1 : fresh -> edit -> stdout      (nvim1 | next)
-      #   nvim2 : fresh -> edit -> stderr      (nvim2 2> out)
-      #   nvim01: stdin -> edit -> stdout      (cmd | nvim01 | next)
-      #   nvim02: stdin -> edit -> stderr      (cmd | nvim02 2> out)
-      function _nvim_pipe() {
+      #   e0 : stdin -> edit -> (nothing)   (cmd | e0)
+      #   e1 : fresh -> edit -> stdout      (e1 | next)
+      #   e2 : fresh -> edit -> stderr      (e2 2> out)
+      #   e01: stdin -> edit -> stdout      (cmd | e01 | next)
+      #   e02: stdin -> edit -> stderr      (cmd | e02 2> out)
+      function _editor_pipe() {
         local rd=$1 out=$2 tmp
         tmp=$(mktemp)
         [ "$rd" = 1 ] && [ ! -t 0 ] && cat > "$tmp"
@@ -86,11 +86,11 @@
         esac
         rm -f "$tmp"
       }
-      function nvim0()  { _nvim_pipe 1 0; }
-      function nvim1()  { _nvim_pipe 0 1; }
-      function nvim2()  { _nvim_pipe 0 2; }
-      function nvim01() { _nvim_pipe 1 1; }
-      function nvim02() { _nvim_pipe 1 2; }
+      function e0()  { _editor_pipe 1 0; }
+      function e1()  { _editor_pipe 0 1; }
+      function e2()  { _editor_pipe 0 2; }
+      function e01() { _editor_pipe 1 1; }
+      function e02() { _editor_pipe 1 2; }
 
       function zle_env_var() {
         local env_var=$(printenv \
