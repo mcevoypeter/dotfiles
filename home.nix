@@ -38,6 +38,7 @@
     ./sqlite
     ./sway
     ./syncthing
+    ./tailscale
     ./tmux
     ./tokei
     ./uv
