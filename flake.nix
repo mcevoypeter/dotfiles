@@ -27,5 +27,18 @@
         }
       ];
     };
+
+    nixosConfigurations."gce-arm" = nixpkgs.lib.nixosSystem {
+      system = "aarch64-linux";
+      modules = [
+        ./linux.nix
+        home-manager.nixosModules.home-manager
+        {
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+          home-manager.users.peter = import ./home.nix;
+        }
+      ];
+    };
   };
 }

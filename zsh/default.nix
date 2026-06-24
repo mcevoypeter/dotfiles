@@ -193,7 +193,7 @@
       local user='%B%n%b'
       local host=""
       if [[ -n "$SSH_CONNECTION" || -n "$SSH_CLIENT" ]]; then
-        host='%F{red}ssh%f<%B%F{red}%m%f%b%>'
+        host='%F{red}ssh%f<%B%F{red}%m%f%b>'
       else
         host='%B%F{magenta}%m%f%b'
       fi

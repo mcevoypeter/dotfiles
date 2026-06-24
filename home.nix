@@ -1,6 +1,7 @@
-{ lib, ... }: {
+{ pkgs, ... }: {
   home.username = "peter";
-  home.homeDirectory = "/Users/peter";
+  # Shared across darwin + linux; only the home root differs by platform.
+  home.homeDirectory = if pkgs.stdenv.isDarwin then "/Users/peter" else "/home/peter";
   home.stateVersion = "25.05";
   home.enableNixpkgsReleaseCheck = false;
 
