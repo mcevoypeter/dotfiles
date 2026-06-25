@@ -1,4 +1,4 @@
-# gce.nix — GCE/host-specific NixOS config for `gce-arm`, the aarch64 VM in
+# gce-aarch64.nix — GCE/host-specific NixOS config for `gce-arm`, the aarch64 VM in
 # project gcp-project. Everything here is tied to this cloud host: hardware
 # (disk/initrd), UEFI bootloader, serial console, and networking. Host-agnostic
 # config lives in nixos.nix. Both are composed in flake.nix.

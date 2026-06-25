@@ -1,6 +1,7 @@
 # nixos.nix — general NixOS config for Peter's machines; the NixOS counterpart to
 # darwin.nix. Everything here is host-agnostic — GCE/host-specific bits (hardware,
-# bootloader, console, networking) live in gce.nix. Paired with the shared
+# bootloader, console, networking) live in the per-host
+# gce-aarch64.nix / gce-x86_64.nix modules. Paired with the shared
 # ./home.nix via home-manager (see flake.nix).
 { config, lib, pkgs, ... }:
 {
@@ -42,7 +43,9 @@
   # Primary user — matches home.nix's home-manager user (home /home/peter).
   users.users.peter = {
     isNormalUser = true;
-    extraGroups = [ "wheel" ];
+    # kvm: read/write access to /dev/kvm for Firecracker / KVM (only materializes
+    # on a host that exposes hardware virt — e.g. bare metal; NOT GCE aarch64 VMs).
+    extraGroups = [ "wheel" "kvm" ];
     shell = pkgs.zsh;
   };
   security.sudo.wheelNeedsPassword = false;
@@ -68,6 +71,7 @@
 
   environment.systemPackages = with pkgs; [
     git vim curl wget htop tmux just ripgrep fd jq uv gh
+    firecracker   # KVM-based microVM monitor (`firecracker`/`jailer`); needs /dev/kvm.
   ];
 
   time.timeZone = "Etc/UTC";

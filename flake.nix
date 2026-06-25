@@ -13,9 +13,13 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nix-homebrew.url = "github:zhaofengli/nix-homebrew";
+    disko = {
+      url = "github:nix-community/disko";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, nix-darwin, home-manager, nix-homebrew, ... }: {
+  outputs = { self, nixpkgs, nix-darwin, home-manager, nix-homebrew, disko, ... }: {
     # Mac.
     darwinConfigurations."darwin" = nix-darwin.lib.darwinSystem {
       modules = [
@@ -36,7 +40,25 @@
       system = "aarch64-linux";
       modules = [
         ./nixos.nix
-        ./gce.nix
+        ./gce-aarch64.nix
+        home-manager.nixosModules.home-manager
+        {
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+          home-manager.extraSpecialArgs = { graphical = false; };
+          home-manager.users.peter = import ./home.nix;
+        }
+      ];
+    };
+
+    # gce-x86 — Intel x86 VM with nested virtualization enabled;
+    # the x86_64 sibling of gce-arm. /dev/kvm works here, so Firecracker boots.
+    nixosConfigurations."gce-x86" = nixpkgs.lib.nixosSystem {
+      system = "x86_64-linux";
+      modules = [
+        ./nixos.nix
+        ./gce-x86_64.nix
+        disko.nixosModules.disko
         home-manager.nixosModules.home-manager
         {
           home-manager.useGlobalPkgs = true;
