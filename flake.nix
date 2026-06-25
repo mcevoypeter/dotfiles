@@ -23,6 +23,7 @@
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
+          home-manager.extraSpecialArgs = { graphical = true; };
           home-manager.users.peter = import ./home.nix;
         }
       ];
@@ -37,6 +38,7 @@
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
+          home-manager.extraSpecialArgs = { graphical = false; };
           home-manager.users.peter = import ./home.nix;
         }
       ];
