@@ -2,11 +2,11 @@
   wayland.windowManager.sway = {
     enable = true;
     config = null;
-    extraConfig = builtins.readFile ./sway/config;
+    extraConfig = builtins.readFile ./config;
   };
 
   xdg.configFile."sway/status.sh" = {
-    source = ./sway/status.sh;
+    source = ./status.sh;
     executable = true;
   };
 }
