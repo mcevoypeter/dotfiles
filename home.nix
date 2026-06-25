@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ pkgs, lib, graphical ? true, ... }: {
   home.username = "peter";
   # Shared across darwin + linux; only the home root differs by platform.
   home.homeDirectory = if pkgs.stdenv.isDarwin then "/Users/peter" else "/home/peter";
@@ -6,7 +6,6 @@
   home.enableNixpkgsReleaseCheck = false;
 
   imports = [
-    ./alacritty
     ./aws
     ./bat
     ./cloudflared
@@ -37,7 +36,6 @@
     ./ripgrep
     ./rust
     ./sqlite
-    ./sway
     ./syncthing
     ./tailscale
     ./tmux
@@ -47,5 +45,10 @@
     ./zoxide
     ./zsh
     ./zstd
+  ]
+  # GUI-only modules — skipped on headless hosts (graphical = false, e.g. nixos-vm1).
+  ++ lib.optionals graphical [
+    ./alacritty
+    ./sway
   ];
 }
