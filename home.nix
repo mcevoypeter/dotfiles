@@ -18,6 +18,7 @@
     ./fd
     ./ffmpeg
     ./fzf
+    ./gcc
     ./gcloud
     ./gh
     ./git-lfs
