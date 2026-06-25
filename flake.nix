@@ -31,7 +31,8 @@
     nixosConfigurations."gce-arm" = nixpkgs.lib.nixosSystem {
       system = "aarch64-linux";
       modules = [
-        ./linux.nix
+        ./nixos.nix
+        ./gce.nix
         home-manager.nixosModules.home-manager
         {
           home-manager.useGlobalPkgs = true;
