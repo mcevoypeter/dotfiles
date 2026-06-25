@@ -47,7 +47,7 @@
     ./zsh
     ./zstd
   ]
-  # GUI-only modules — skipped on headless hosts (graphical = false, e.g. gce-arm).
+  # GUI-only modules — skipped on headless hosts (graphical = false).
   ++ lib.optionals graphical [
     ./alacritty
     ./sway

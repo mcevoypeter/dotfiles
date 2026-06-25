@@ -19,54 +19,40 @@
     };
   };
 
-  outputs = { self, nixpkgs, nix-darwin, home-manager, nix-homebrew, disko, ... }: {
-    # Mac.
-    darwinConfigurations."darwin" = nix-darwin.lib.darwinSystem {
-      modules = [
-        ./darwin.nix
-        nix-homebrew.darwinModules.nix-homebrew
-        home-manager.darwinModules.home-manager
-        {
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-          home-manager.extraSpecialArgs = { graphical = true; };
-          home-manager.users.peter = import ./home.nix;
-        }
-      ];
-    };
+  outputs = { self, nixpkgs, nix-darwin, home-manager, nix-homebrew, disko, ... }:
+    let
+      hm = graphical: {
+        home-manager.useGlobalPkgs = true;
+        home-manager.useUserPackages = true;
+        home-manager.extraSpecialArgs = { inherit graphical; };
+        home-manager.users.peter = import ./home.nix;
+      };
+    in {
+      # Generic, machine-agnostic configs. Each machine's real identity
+      # (networking.hostName, etc.) is supplied by its OWN local, untracked
+      # entrypoint — never committed here:
+      #   * NixOS host: /etc/nixos/flake.nix builds
+      #       dotfiles.nixosConfigurations.gce-x86.extendModules
+      #         { modules = [ { networking.hostName = "<name>"; } ]; }
+      #   * macOS:      apply.sh builds .#$HOST, with HOST set in .envrc.local.
+      darwinConfigurations.darwin = nix-darwin.lib.darwinSystem {
+        modules = [
+          ./darwin.nix
+          nix-homebrew.darwinModules.nix-homebrew
+          home-manager.darwinModules.home-manager
+          (hm true)
+        ];
+      };
 
-    # gce-arm.
-    nixosConfigurations."gce-arm" = nixpkgs.lib.nixosSystem {
-      system = "aarch64-linux";
-      modules = [
-        ./nixos.nix
-        ./gce-aarch64.nix
-        home-manager.nixosModules.home-manager
-        {
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-          home-manager.extraSpecialArgs = { graphical = false; };
-          home-manager.users.peter = import ./home.nix;
-        }
-      ];
+      nixosConfigurations.gce-x86 = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./nixos.nix
+          ./gce-x86_64.nix
+          disko.nixosModules.disko
+          home-manager.nixosModules.home-manager
+          (hm false)
+        ];
+      };
     };
-
-    # gce-x86 — Intel x86 VM with nested virtualization enabled;
-    # the x86_64 sibling of gce-arm. /dev/kvm works here, so Firecracker boots.
-    nixosConfigurations."gce-x86" = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
-      modules = [
-        ./nixos.nix
-        ./gce-x86_64.nix
-        disko.nixosModules.disko
-        home-manager.nixosModules.home-manager
-        {
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-          home-manager.extraSpecialArgs = { graphical = false; };
-          home-manager.users.peter = import ./home.nix;
-        }
-      ];
-    };
-  };
 }

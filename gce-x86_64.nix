@@ -1,11 +1,9 @@
-# gce-x86_64.nix — GCE/host-specific NixOS config for `gce-x86`, the
-# x86_64 (Intel) VM in project gcp-project; the x86 counterpart to gce-aarch64.nix.
-# Host-agnostic config lives in nixos.nix. Both are composed in flake.nix.
+# gce-x86_64.nix — reusable module for an x86_64 (Intel) GCE NixOS host.
+# Machine-agnostic: the host identity (networking.hostName) is supplied by the
+# machine's local entrypoint flake, not here. Composed via nixosConfigurations.gce-x86.
 #
-# This host is an x86 VM created WITH nested virtualization enabled
-# (`--enable-nested-virtualization`; n2 runs Cascade Lake+, already > Haswell). On GCE,
-# nested virt is Intel-only, so unlike the aarch64 host the kvm-intel module
-# below yields a working /dev/kvm — i.e. Firecracker actually boots here.
+# Assumes the GCE VM was created WITH nested virtualization enabled (Intel-only on
+# GCE), so the kvm-intel module below yields a working /dev/kvm — Firecracker boots.
 { modulesPath, lib, ... }:
 {
   imports = [ (modulesPath + "/profiles/qemu-guest.nix") ];
@@ -52,7 +50,7 @@
   };
 
   # ---- Bootloader: GRUB-EFI, "removable" install (GCE UEFI firmware boots the
-  # fallback \EFI\BOOT\BOOTX64.EFI), mirroring gce-aarch64.nix. ----
+  # fallback \EFI\BOOT\BOOTX64.EFI). ----
   boot.loader.grub = {
     enable = true;
     efiSupport = true;
@@ -67,8 +65,8 @@
   # console captures the full systemd boot log + emergency shell.
   boot.kernelParams = [ "console=tty1" "console=ttyS0,115200n8" ];
 
-  # ---- Networking: systemd-networkd + resolved (GCE-generic; see gce-aarch64.nix) ----
-  networking.hostName = "gce-x86";
+  # ---- Networking: systemd-networkd + resolved (GCE-generic) ----
+  # networking.hostName is intentionally NOT set here — the local entrypoint sets it.
   networking.usePredictableInterfaceNames = false;   # NIC is eth0 on GCE
   networking.useDHCP = false;
   systemd.network.enable = true;
