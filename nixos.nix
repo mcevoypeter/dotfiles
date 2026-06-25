@@ -62,8 +62,8 @@
     stdenv.cc.cc.lib zlib openssl curl glibc
     nss nspr dbus atk cups libdrm mesa
     alsa-lib pango cairo glib expat
-    xorg.libX11 xorg.libXcomposite xorg.libXext
-    xorg.libXdamage xorg.libXfixes xorg.libxcb xorg.libXrandr
+    libx11 libxcomposite libxext
+    libxdamage libxfixes libxcb libxrandr
   ];
 
   environment.systemPackages = with pkgs; [
