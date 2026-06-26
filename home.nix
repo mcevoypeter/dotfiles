@@ -27,6 +27,7 @@
     ./jj
     ./jq
     ./just
+    ./make
     ./node
     ./nvim
     ./op
