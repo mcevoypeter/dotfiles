@@ -67,17 +67,6 @@ require("lazy").setup({
       end,
     },
     {
-      "Julian/lean.nvim",
-      event = { "BufReadPre *.lean", "BufNewFile *.lean" },
-
-      dependencies = {},
-      ---@type lean.Config
-      opts = {
-        mappings = true,
-        lsp = { enable = false },
-      }
-    },
-    {
       "junegunn/fzf.vim",
       dependencies = { "junegunn/fzf" }, -- Install fzf as a dependency
       build = function()
@@ -169,18 +158,10 @@ require("lazy").setup({
         -- npm i -g typescript typescript-language-server
         vim.lsp.config('ts_ls', {})
 
-        -- lean4 (managed by lean.nvim plugin, LSP started here)
-        vim.lsp.config('leanls', {
-          cmd = { 'lake', 'serve' },
-          filetypes = { 'lean' },
-          root_markers = { 'lakefile.lean', 'lakefile.toml', 'lean-toolchain', 'leanpkg.toml' },
-        })
-
         vim.lsp.enable({
           'bashls',
           'dockerls',
           'jsonls',
-          'leanls',
           'pyright',
           'rust_analyzer',
           'sourcekit',
