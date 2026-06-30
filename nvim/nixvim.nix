@@ -224,6 +224,7 @@
   lsp.servers = {
     bashls.enable = true;        # bash-language-server
     dockerls.enable = true;      # dockerfile-language-server
+    gopls.enable = true;
     jsonls.enable = true;        # vscode-langservers-extracted
     pyright.enable = true;
     rust_analyzer.enable = true;
