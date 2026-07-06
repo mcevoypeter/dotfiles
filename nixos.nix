@@ -71,6 +71,7 @@
   environment.systemPackages = with pkgs; [
     git vim curl wget htop tmux just ripgrep fd jq uv gh
     firecracker   # KVM-based microVM monitor (`firecracker`/`jailer`); needs /dev/kvm.
+    thin-provisioning-tools   # thin_check et al.; LVM refuses to (de)activate a thin pool without them (woma per-VM roots).
   ];
 
   time.timeZone = "Etc/UTC";
