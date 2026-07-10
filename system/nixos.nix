@@ -1,7 +1,7 @@
 # nixos.nix — general NixOS config for Peter's machines; the NixOS counterpart to
 # darwin.nix. Everything here is host-agnostic — GCE/host-specific bits (hardware,
 # bootloader, console, networking) live in the per-host gce-x86_64.nix module.
-# Paired with the shared ./home.nix via home-manager (see flake.nix).
+# Paired with the shared ./home via home-manager (see flake.nix).
 { config, lib, pkgs, ... }:
 {
   nixpkgs.config.allowUnfreePredicate = pkg:

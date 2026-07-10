@@ -29,9 +29,9 @@
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;
         home-manager.extraSpecialArgs = { inherit graphical; };
-        # Make `programs.nixvim` available to every home-manager user (./nvim).
+        # Make `programs.nixvim` available to every home-manager user (./home/nvim).
         home-manager.sharedModules = [ nixvim.homeModules.nixvim ];
-        home-manager.users.peter = import ./home.nix;
+        home-manager.users.peter = import ./home;
       };
     in {
       # Generic, machine-agnostic configs. Each machine's real identity
@@ -43,7 +43,7 @@
       #   * macOS:      apply.sh builds .#$HOST, with HOST set in .envrc.local.
       darwinConfigurations.darwin = nix-darwin.lib.darwinSystem {
         modules = [
-          ./darwin.nix
+          ./system/darwin.nix
           nix-homebrew.darwinModules.nix-homebrew
           home-manager.darwinModules.home-manager
           (hm true)
@@ -53,8 +53,8 @@
       nixosConfigurations.gce-x86 = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-          ./nixos.nix
-          ./gce-x86_64.nix
+          ./system/nixos.nix
+          ./system/gce-x86_64.nix
           disko.nixosModules.disko
           home-manager.nixosModules.home-manager
           (hm false)
