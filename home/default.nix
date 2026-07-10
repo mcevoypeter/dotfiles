@@ -30,6 +30,7 @@
   home.packages = with pkgs; [
     awscli2           # aws
     cloudflared
+    codex
     delta
     duckdb
     dust
