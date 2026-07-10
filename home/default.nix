@@ -20,6 +20,7 @@
   # GUI-only modules — skipped on headless hosts (graphical = false).
   ++ lib.optionals graphical [
     ./alacritty
+    ./paneru
     ./sway
   ];
 
