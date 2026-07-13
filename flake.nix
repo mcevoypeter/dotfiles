@@ -21,23 +21,16 @@
       url = "github:nix-community/disko";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    # Sliding, tiling window manager for macOS (the darwin analog of ./home/sway).
-    # Exposes homeModules.paneru, wired into every home-manager user below.
-    paneru = {
-      url = "github:karinushka/paneru";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
-  outputs = { self, nixpkgs, nix-darwin, home-manager, nix-homebrew, nixvim, disko, paneru, ... }:
+  outputs = { self, nixpkgs, nix-darwin, home-manager, nix-homebrew, nixvim, disko, ... }:
     let
       hm = graphical: {
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;
         home-manager.extraSpecialArgs = { inherit graphical; };
-        # Make `programs.nixvim` (./home/nvim) and `services.paneru` (./home/paneru)
-        # available to every home-manager user.
-        home-manager.sharedModules = [ nixvim.homeModules.nixvim paneru.homeModules.paneru ];
+        # Make `programs.nixvim` available to every home-manager user (./home/nvim).
+        home-manager.sharedModules = [ nixvim.homeModules.nixvim ];
         home-manager.users.peter = import ./home;
       };
     in {
