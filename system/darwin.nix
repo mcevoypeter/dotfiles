@@ -7,6 +7,7 @@
       "1password-cli"
     ];
   system.stateVersion = 5;
+  system.primaryUser = "peter";
   users.users.peter = {
     name = "peter";
     home = "/Users/peter";
